@@ -1,0 +1,192 @@
+.background {
+    background-image: url('coding.gif');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+}
+
+a:focus-visible {
+    outline: 3px solid #25A978; 
+}
+
+.nav-color-1 {
+    background-color: #97e8ca;
+}
+
+.navbar a {
+    color: #282828;
+    text-decoration: none;
+    font-size: clamp(24px, 3vw, 4vw);
+    margin: 0px clamp(15px, 2vw, 3vw);
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 5px;
+    text-underline-offset: 10px;
+}
+
+.content {
+    font-family: 'Jacques Francois', serif;
+    color: white;
+    min-height: 80vh;
+    margin-top: 10vh;
+}
+
+.content h1 {
+    font-size: clamp(56px, 5vw, 6vw);
+}
+
+.content h2 {
+    font-size: clamp(36px, 3vw, 4vw);
+}
+
+.resume-button {
+    padding: clamp(10px, 2vh, 3vh) clamp(20px, 3vw, 4vw);
+    border: 2px solid black;
+    color: black;
+    text-decoration: none;
+    font-size: clamp(18px, 2vw, 3vw);
+    background-color: #cccccc;
+}
+
+@media (hover:hover) {
+.resume-button:hover {
+    background-color: #97e8ca;
+    padding: clamp(20px, 3vh, 4vh) clamp(40px, 5vw, 6vw);
+    color: #282828;
+    font-size: clamp(24px, 3vw, 4vw);
+}
+}
+
+.resume-button:active {
+    background-color: #25A978;
+    padding: clamp(10px, 2vh, 3vh) clamp(20px, 3vw, 4vw);
+    border: 2px solid black;
+    color: white;
+    text-decoration: none;
+    font-size: clamp(18px, 2vw, 3vw);
+}
+
+.resume-button-spacing {
+    margin-top: clamp(300px, 31vh, 32vh);
+}
+
+.header-bar {
+    position: fixed;
+    width: 100%;
+    height: clamp(90px, 10vh, 11vh);
+    background-color: black;
+    color: white;
+    font-family: '42dot Sans', serif;
+}
+
+.menu-button{
+    font-size: clamp(24px, 3vw, 4vw);
+}
+
+.title-margin {
+    font-size: clamp(50px, 5vw, 6vw);
+}
+
+#offcanvaslinks {
+    background-color: #25A978;
+    height: 100vh;
+    width: clamp(150px, 16vw, 17vw);
+}
+
+.offcanvas-title {
+    font-size: clamp(24px, 3vw, 4vw);
+}
+
+.about-container {
+    background-color: #97e8ca;
+    padding-top: clamp(100px, 11vh, 12vh);
+}
+
+.about-container h2 {
+    font-size: clamp(28px, 3vw, 4vw);
+}
+
+.profile-image-radius {
+    width: clamp(250px, 26vw, 27vw);
+
+    border: 2px solid #282828;
+}
+
+.about-text {
+    max-width: 90%;
+    font-size: clamp(16px, 1.5vw, 2vw);
+    text-align: justify;
+    margin-left: clamp(18px, 1.5vw, 2vw);
+    color: black;
+}
+
+.skill-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #d32f2f;
+    border-radius: 10px;
+}
+.skill-container h2 {
+    margin-bottom: 20px;
+}
+.skills {
+    display: flex;
+    justify-content: space-between;
+}
+.skill-column {
+    width: 45%;
+    text-align: left;
+}
+ul {
+    list-style: none;
+    padding: 0;
+}
+li {
+    padding: 5px 0;
+    font-size: 18px;
+}
+
+.contact-container {
+    max-width: 600px;
+    margin: 50px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 15px rgba(0,0,0,0.1);
+}
+
+/* Form styling */
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background: #007BFF;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Contact Info */
+.contact-info {
+    margin-top: 20px;
+    font-size: 14px;
+}

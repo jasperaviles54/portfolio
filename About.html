@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=42dot Sans' rel='stylesheet'>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <title>About Me</title>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    <script src="script.js" defer></script>
+    <header class="header-bar d-flex">
+        <button class="d-lg-none menu-button" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvaslinks">
+            Menu
+        </button>
+        <div class="flex-grow-1 text-center align-self-center">
+            <h1 class="title-margin">About Me</h1>
+        </div>
+    </header>
+    <main class="container-fluid about-container min-vh-100">
+        <div class="row align-items-center gy-4 mt-lg-5">
+            <div class="col-lg-2">
+                <div class="offcanvas offcanvas-start" id="offcanvaslinks">
+                    <div class="offcanvas-header">
+                        <h1 class="offcanvas-title">
+                            Menu
+                        </h1>
+                        <button type="button" class="d-lg-none btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close">
+                        </button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <nav class="navbar d-flex justify-content-center" aria-label="Navigation Menu">
+                            <ul class="navbar-nav nav-links">
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4 text-center mb-4 mb-lg-0">
+                <img src="profile.png" class="rounded-circle profile-image-radius" alt="Profile Image">
+                <h2 class="mt-3">Jasper T. Aviles</h2>
+            </div>
+            <div class="col-12 col-lg-6">
+                <p class="about-text">I am currently a student taking Information Systems with proficient skills in programming, analytics, and problem-solving. My technical expertise includes the use of various programming languages, including HTML, CSS, JavaScript, C++, and Java. As a receptive learner, I accept challenges and find opportunities to expand my knowledge. I also value honesty, empathy, and flexibility, which enable me to collaborate effectively and adapt to diverse environments. Additionally, I excel in explaining complex concepts, engaging in research-oriented discussions, and working with teams to find innovative solutions. Furthermore, I enjoy coding, building websites and software, analyzing problems, and optimizing system workflows, all while staying open to growth and new perspectives. Ultimately, my goal is to contribute meaningful solutions in technology while continually learning and collaborating.</p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

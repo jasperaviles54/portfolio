@@ -79,6 +79,7 @@ a:focus-visible {
     background-color: black;
     color: white;
     font-family: '42dot Sans', serif;
+    z-index: 1;
 }
 
 .menu-button{
@@ -110,7 +111,6 @@ a:focus-visible {
 
 .profile-image-radius {
     width: clamp(250px, 26vw, 27vw);
-
     border: 2px solid #282828;
 }
 
@@ -158,35 +158,75 @@ li {
     box-shadow: 2px 2px 15px rgba(0,0,0,0.1);
 }
 
-/* Form styling */
-.input-group {
-    margin-bottom: 15px;
-    text-align: left;
+.socials-container {
+    border:2px solid black;
 }
 
-label {
-    font-weight: bold;
-    display: block;
-}
-
-input, textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-button {
-    background: #007BFF;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-/* Contact Info */
 .contact-info {
     margin-top: 20px;
     font-size: 14px;
+}
+
+.social-icons {
+    width: 200px;
+    height: 200px;
+}
+
+.social-icons img {
+    width: 36px;
+    height: 36px;
+    transition: transform 0.2s;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
+}
+
+.contact-note, .contact-number {
+    font-size: clamp(14px, 1.5vw, 18px);
+    color: #222;
+}
+
+.contact-form h3 {
+    font-size: clamp(20px, 2vw, 2.5vw);
+}
+
+
+.floating-label-group {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.floating-textarea {
+  width: 100%;
+  padding: 16px 12px;
+  font-size: 1rem;
+}
+
+.floating-label {
+  position: absolute;
+  top: 16px;
+  left: 2px;
+  color: #6c757d;
+  transition: 0.2s ease;
+  padding: 0 4px;
+  font-size: 1rem;
+}
+
+/* Float the label when textarea is focused or not empty */
+.floating-textarea:focus + .floating-label,
+.floating-textarea:not(:placeholder-shown):valid + .floating-label {
+  top: -35px;
+  left: -8px;
+  font-size: 1.5rem;
+  color: #343a40;
+}
+
+.silt{
+    font-family: 'Shadows Into Light Two', serif;
+}
+
+.submit-button {
+    background-color: #25A978;
+    border-radius: 5px;
 }

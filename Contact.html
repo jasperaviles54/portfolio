@@ -41,7 +41,7 @@
             </div>
             <div class="col-12 col-lg-4 text-center pt-lg-5 silt">
                 <div class="socials-container mx-5">
-                    <h2 class="mb-4">My Social Links:</h2>
+                    <h2 class="mb-4 mt-3">My Social Links:</h2>
                     <div class="social-icons mb-3 d-flex flex-wrap justify-content-center justify-content-lg-start gap-3 position-relative icon-x-wrapper mx-auto object-fit-contain">
                         <a href="mailto:jasperaviles54@gmail.com" class="position-absolute top-0 start-0"><img src="icons/gmail.svg" alt="Gmail"></a>
                         <a href="https://www.linkedin.com/in/jasperaviles" class="position-absolute top-0 end-0"><img src="icons/linkedin.svg" alt="LinkedIn"></a>
@@ -53,17 +53,18 @@
                 </div>
             </div>
             <div class="col-12 col-lg-6 pt-lg-5 silt">
-                <form id="contactForm" class="contact-form p-4">
+                <form id="gitbox" class="p-4">
                     <h3 class="text-center mb-4">Get in Touch</h3>
-                    <div class="mb-3">
-                        <label for="email" class="form-label">Your Email:</label>
+                    <div class="form-floating mb-3">
                         <input type="email" class="form-control" id="email" placeholder="Your Email:" required>
+                        <label for="email" class="form-label">Your Email:</label>
+                        <span id="emailStatus" class="form-text"></span>
                     </div>
-<div class="floating-label-group mt-5">
-  <textarea id="message" class="floating-textarea" rows="4" required></textarea>
-  <label for="message" class="floating-label">Your Message</label>
-</div>
-                    <button type="submit" class="submit-button w-100">Submit</button>
+                    <div class="form-floating mb-3">
+                        <textarea class="form-control" id="message" rows="5" placeholder="Your Message:" required></textarea>
+                        <label for="message" class="form-label">Your Message:</label>
+                    </div>
+                    <button type="submit" class="submit-button">Submit</button>
                 </form>
             </div>
         </div>

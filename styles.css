@@ -173,8 +173,8 @@ li {
 }
 
 .social-icons img {
-    width: 36px;
-    height: 36px;
+    width: 60px;
+    height: 60px;
     transition: transform 0.2s;
 }
 
@@ -182,48 +182,22 @@ li {
     transform: scale(1.1);
 }
 
-.contact-note, .contact-number {
+.contact-number {
+    font-size: clamp(20px, 3vw, 24px);
+    color: #222;
+}
+
+.contact-note {
     font-size: clamp(14px, 1.5vw, 18px);
     color: #222;
 }
 
-.contact-form h3 {
-    font-size: clamp(20px, 2vw, 2.5vw);
-}
-
-
-.floating-label-group {
-  position: relative;
-  margin-bottom: 1.5rem;
-}
-
-.floating-textarea {
-  width: 100%;
-  padding: 16px 12px;
-  font-size: 1rem;
-}
-
-.floating-label {
-  position: absolute;
-  top: 16px;
-  left: 2px;
-  color: #6c757d;
-  transition: 0.2s ease;
-  padding: 0 4px;
-  font-size: 1rem;
-}
-
-/* Float the label when textarea is focused or not empty */
-.floating-textarea:focus + .floating-label,
-.floating-textarea:not(:placeholder-shown):valid + .floating-label {
-  top: -35px;
-  left: -8px;
-  font-size: 1.5rem;
-  color: #343a40;
-}
-
 .silt{
     font-family: 'Shadows Into Light Two', serif;
+}
+
+form textarea {
+    resize: none;
 }
 
 .submit-button {

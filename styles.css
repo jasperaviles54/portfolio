@@ -196,8 +196,9 @@ li {
     font-family: 'Shadows Into Light Two', serif;
 }
 
-form textarea {
-    resize: none;
+#message {
+  resize: none;
+  height: unset;
 }
 
 .submit-button {

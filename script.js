@@ -96,7 +96,7 @@ const handleGitboxInteractions = () => {
     function autoResize(e) {
       const textarea = e.target;
       textarea.style.height = 'auto';
-      textarea.style.height = textarea.scrollHeight + 'px';
+      textarea.style.height = '${textarea.scrollHeight}px';
     }
 
     gitbox.addEventListener('submit', function (event) {

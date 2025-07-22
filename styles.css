@@ -204,4 +204,5 @@ li {
 .submit-button {
     background-color: #25A978;
     border-radius: 5px;
+    font-size: clamp(18px, 2vw, 3vw);
 }

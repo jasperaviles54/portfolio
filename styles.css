@@ -162,11 +162,6 @@ li {
     border:2px solid black;
 }
 
-.contact-info {
-    margin-top: 20px;
-    font-size: 14px;
-}
-
 .social-icons {
     width: 200px;
     height: 200px;
@@ -183,13 +178,14 @@ li {
 }
 
 .contact-number {
-    font-size: clamp(20px, 3vw, 24px);
+    font-size: clamp(20px, 2.5vw, 24px);
     color: #222;
 }
 
 .contact-note {
-    font-size: clamp(14px, 1.5vw, 18px);
+    font-size: clamp(14px, 1.5vw, 2vw);
     color: #222;
+    opacity: 80%;
 }
 
 .silt{
@@ -203,6 +199,6 @@ li {
 
 .submit-button {
     background-color: #25A978;
-    border-radius: 5px;
-    font-size: clamp(18px, 2vw, 3vw);
+    border-radius: 50px;
+    font-size: clamp(16px, 2vw, 3vw);
 }

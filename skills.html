@@ -2,39 +2,65 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='https://fonts.googleapis.com/css?family=Jacques Francois' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=42dot Sans' rel='stylesheet'>
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
-    <title>Skill Set</title>
+    <title>About Me</title>
 </head>
 <body>
-    <div class="skill-container">
-        <h2>Skill Set</h2>
-        <div class="skills">
-            <div class="skill-column">
-                <h3>Soft Skills</h3>
-                <ul>
-                    <li>Communication</li>
-                    <li>Leadership</li>
-                    <li>Problem-Solving</li>
-                    <li>Time Management</li>
-                    <li>Creativity</li>
-                    <li>Adaptability</li>
-                </ul>
-            </div>
-            <div class="skill-column">
-                <h3>Technical Skills</h3>
-                <ul>
-                    <li>HTML/CSS</li>
-                    <li>C++</li>
-                    <li>Java</li>
-                    <li>Python</li>
-                    <li>SQL</li>
-                    <li>Flutter/Dart</li>
-                </ul>
-            </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    <script src="script.js" defer></script>
+    <noscript>
+        <p class="text-center text-danger" role="alert">JavaScript is disabled in your browser. Some features may not work as expected.</p>
+    </noscript>
+    <header class="header-bar d-flex">
+        <button class="d-lg-none menu-button" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvaslinks">
+            Menu
+        </button>
+        <div class="flex-grow-1 text-center align-self-center">
+            <h1 class="title-margin ps-lg-3">About Me</h1>
         </div>
-    </div>
+    </header>
+    <main class="container-fluid sub-content min-vh-100">
+        <div class="row align-items-center gy-4 mt-lg-5">
+            <div class="col-lg-2">
+                <div class="offcanvas offcanvas-start" id="offcanvaslinks">
+                    <div class="offcanvas-header">
+                        <h1 class="offcanvas-title">
+                            Menu
+                        </h1>
+                        <button type="button" class="d-lg-none btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close">
+                        </button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <nav class="navbar d-flex justify-content-center" aria-label="Navigation Menu">
+                            <ul class="navbar-nav nav-links">
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <!--div class="col-12 col-lg-10">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original-wordmark.svg">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dart/dart-original.svg">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original-wordmark.svg">
+                <a href="https://logowik.com/java-symbol-logo-vector-55040.html"><img src="https://logowik.com/content/uploads/images/java-symbol3728.logowik.com.webp"></a>
+                <a href="https://logowik.com/javascript-vector-logo-1-4516.html"><img src="https://logowik.com/content/uploads/images/javascript.jpg"></a>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/r/r-original.svg">
+
+                <a href="https://logowik.com/bootstrap-vector-logo-4180.html"><img src="https://logowik.com/content/uploads/images/bootstrap.jpg"></a>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg">
+
+
+                <a href="https://logowik.com/git-vector-logo-9231.html"><img src="https://logowik.com/content/uploads/images/git6963.jpg"></a>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rstudio/rstudio-original.svg">
+                <a href="https://logowik.com/tableau-software-vector-logo-4273.html"><img src="https://logowik.com/content/uploads/images/tableau-software.jpg"></a>
+                <a href="https://logowik.com/jupyter-logo-vector-png-svg-free-download-21180.html"><img src="https://logowik.com/content/uploads/images/jupyter251.logowik.com.webp"></a>
+            </div-->
+        </div>
+    </main>
 </body>
 </html>

@@ -26,19 +26,19 @@ a:focus-visible {
     text-underline-offset: 10px;
 }
 
-.content {
+.main-content {
     font-family: 'Jacques Francois', serif;
     color: white;
     min-height: 80vh;
     margin-top: 10vh;
 }
 
-.content h1 {
-    font-size: clamp(56px, 5vw, 6vw);
+.main-content h1 {
+    font-size: clamp(56px, 5.5vw, 6vw);
 }
 
-.content h2 {
-    font-size: clamp(36px, 3vw, 4vw);
+.main-content h2 {
+    font-size: clamp(36px, 3.5vw, 4vw);
 }
 
 .resume-button {
@@ -87,7 +87,7 @@ a:focus-visible {
 }
 
 .title-margin {
-    font-size: clamp(50px, 5vw, 6vw);
+    font-size: clamp(48px, 5vw, 6vw);
 }
 
 #offcanvaslinks {
@@ -96,16 +96,20 @@ a:focus-visible {
     width: clamp(150px, 16vw, 17vw);
 }
 
+li {
+    padding: 5px 0px;
+}
+
 .offcanvas-title {
     font-size: clamp(24px, 3vw, 4vw);
 }
 
-.about-container {
+.sub-content {
     background-color: #97e8ca;
     padding-top: clamp(100px, 11vh, 12vh);
 }
 
-.about-container h2 {
+.sub-content h2 {
     font-size: clamp(28px, 3vw, 4vw);
 }
 
@@ -140,36 +144,19 @@ a:focus-visible {
     width: 45%;
     text-align: left;
 }
-ul {
-    list-style: none;
-    padding: 0;
-}
-li {
-    padding: 5px 0;
-    font-size: 18px;
-}
-
-.contact-container {
-    max-width: 600px;
-    margin: 50px auto;
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 2px 2px 15px rgba(0,0,0,0.1);
-}
 
 .socials-container {
     border:2px solid black;
 }
 
 .social-icons {
-    width: 200px;
-    height: 200px;
+    aspect-ratio: 1/1;
+    width: clamp(140px, 15vw, 16vw);
 }
 
 .social-icons img {
-    width: 60px;
-    height: 60px;
+    aspect-ratio: 1/1;
+    width: clamp(42px, 4.5vw, 5vw);
     transition: transform 0.2s;
 }
 
@@ -178,7 +165,7 @@ li {
 }
 
 .contact-number {
-    font-size: clamp(20px, 2.5vw, 24px);
+    font-size: clamp(20px, 2.5vw, 3vw);
     color: #222;
 }
 
@@ -186,15 +173,45 @@ li {
     font-size: clamp(14px, 1.5vw, 2vw);
     color: #222;
     opacity: 80%;
+    margin-right: 20px;
 }
 
 .silt{
     font-family: 'Shadows Into Light Two', serif;
 }
 
+#gitbox {
+    padding: 0px clamp(16px, 2vw, 3vw);
+}
+
+#email {
+    height: unset;
+    width: 100%;
+    padding-top: clamp(32px, 3.5vh, 4vh);
+    padding-left: clamp(16px, 2vw, 3vw);
+    font-size: clamp(16px, 2vw, 3vw);
+}
+
 #message {
-  resize: none;
-  height: unset;
+    height: unset;
+    width: 100%;
+    padding-top: clamp(36px, 4vh, 5vh);
+    padding-left: clamp(16px, 2vw, 3vw);
+    font-size: clamp(16px, 2vw, 3vw);
+    resize: none;
+}
+
+#email-status {
+    font-size: clamp(14px, 1.5vw, 2vw);
+}
+
+label {
+    font-size: clamp(16px, 2vw, 3vw);
+}
+
+.input-warning {
+    font-size: clamp(14px, 1.5vw, 2vw);
+    color: red;
 }
 
 .submit-button {

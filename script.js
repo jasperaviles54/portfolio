@@ -79,8 +79,8 @@ const handleGitboxInteractions = () => {
   const getMessageValue = () => messageInput.value.trim();
   const isEmailValid = () => emailPattern.test(getEmailValue());
 
-  const isReady = () => gitbox && emailInput && messageInput && submitButton && status && emailError && messageError;
-  if (!isReady()) return;
+  const areElementsReady = () => gitbox && emailInput && messageInput && submitButton && status && emailError && messageError;
+  if (!areElementsReady()) return;
 
   let validBefore = false;
 
@@ -105,10 +105,13 @@ const handleGitboxInteractions = () => {
   let emailTouched = false;
   let messageTouched = false;
 
+  const isFormValid = () => {
+  return isEmailValid() && getMessageValue() !== "";
+  };
+
   const validateInputs = () => {
     const isMessageFilled = getMessageValue() !== "";
-
-    submitButton.disabled = !(isEmailValid() && isMessageFilled);
+    submitButton.disabled = !isFormValid();
 
     if (emailError) {
       emailError.style.display = emailTouched && getEmailValue() === "" ? "block" : "none";
@@ -118,8 +121,6 @@ const handleGitboxInteractions = () => {
       messageError.style.display = messageTouched && getMessageValue() === "" ? "block" : "none";
     }
   };
-
-  const canSubmitForm = () => !submitButton.disabled && isEmailValid() && getMessageValue() !== "";
 
   const handleEmailInteraction = () => {
   emailTouched = true;
@@ -150,13 +151,51 @@ const handleGitboxInteractions = () => {
 
   gitbox.addEventListener("submit", (submitEvent) => {
     submitEvent.preventDefault();
-    if (canSubmitForm()) {
-      alert("Thank you for your message!");
-      gitbox.reset();
-      resetFormFeedback();
+    submitButton.disabled = true;
+    submitButton.textContent = "Sending...";
+
+    if (!isFormValid()) {
+      submitButton.textContent = "Submit";
+      submitButton.disabled = false;
+      return;
+    }
+
+    if (isFormValid()) {
+      const email = getEmailValue();
+      const message = getMessageValue();
+
+      fetch("https://your-vercel-project.vercel.app/api/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, message })
+      })
+
+      .then(res => res.ok ? res.json() : Promise.reject("Invalid response"))
+      .then(data => {
+        if (data.success) {
+          submitButton.textContent = "Submitted!";
+          setTimeout(() => {
+            submitButton.textContent = "Submit";
+          }, 3000); 
+          alert("Thank you for your message!");
+          gitbox.reset();
+          resetFormFeedback();
+        }
+
+        else {
+          throw new Error("Unexpected response format");
+        }
+      })
+      
+      .catch(error => {
+        console.error("Submission failed:", error);
+        alert("Something went wrong. Please try again.");
+        submitButton.textContent = "Submit";
+        submitButton.disabled = false;
+      });
     }
   });
-  
+
   updateEmailFeedback();
   validateInputs();
 };

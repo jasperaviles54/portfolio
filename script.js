@@ -164,7 +164,7 @@ const handleGitboxInteractions = () => {
       const email = getEmailValue();
       const message = getMessageValue();
 
-      fetch("https://portfolio-git-main-jasper-aviles-projects.vercel.app/api/submit", {
+      fetch("https://portfolio-jasper-aviles-projects.vercel.app/api/submit", {
         method: "POST",
         mode: "cors",
         headers: { "Content-Type": "application/json" },

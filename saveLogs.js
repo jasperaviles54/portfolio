@@ -2,9 +2,9 @@ const { exec } = require("child_process");
 const fs = require("fs");
 const path = require("path");
 
-const DEPLOYMENT_URL = "https://your-project.vercel.app"; // Replace with your actual URL
+const DEPLOYMENT_URL = "https://portfolio-jasper-aviles-projects.vercel.app/";
 const LOG_DIR = path.join(__dirname, "logs");
-const INTERVAL = 5 * 60 * 1000; // 5 minutes
+const INTERVAL = 5 * 60 * 1000;
 
 if (!fs.existsSync(LOG_DIR)) {
   fs.mkdirSync(LOG_DIR);
@@ -50,4 +50,4 @@ function fetchLogs() {
 }
 
 setInterval(fetchLogs, INTERVAL);
-fetchLogs(); // Run immediately on start
+fetchLogs();

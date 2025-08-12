@@ -1,4 +1,7 @@
 export default function handler(req, res) {
+  res.setHeader('Access-Control-Allow-Origin', 'https://jasperaviles54.github.io');
+  res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
   if (req.method === 'POST') {
     const { email, message } = req.body;
     console.log('Received:', email, message);

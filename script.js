@@ -164,7 +164,7 @@ const handleGitboxInteractions = () => {
       const email = getEmailValue();
       const message = getMessageValue();
 
-      fetch("https://your-vercel-project.vercel.app/api/submit", {
+      fetch("https://jasperaviles54.github.io/portfolio/api/submit", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, message })

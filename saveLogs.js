@@ -2,7 +2,7 @@ const { exec } = require("child_process");
 const fs = require("fs");
 const path = require("path");
 
-const DEPLOYMENT_URL = "https://portfolio-jasper-aviles-projects.vercel.app/";
+const DEPLOYMENT_URL = "https://portfolio-jasper-aviles-projects.vercel.app";
 const LOG_DIR = path.join(__dirname, "logs");
 const INTERVAL = 5 * 60 * 1000;
 

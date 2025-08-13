@@ -149,53 +149,55 @@ const handleGitboxInteractions = () => {
   messageError.style.display = "none";
   };
 
-  gitbox.addEventListener("submit", (submitEvent) => {
-    submitEvent.preventDefault();
-    submitButton.disabled = true;
-    submitButton.textContent = "Sending...";
+  gitbox.addEventListener("submit", async (submitEvent) => {
+  submitEvent.preventDefault();
+  submitButton.disabled = true;
+  submitButton.textContent = "Sending...";
 
-    if (!isFormValid()) {
-      submitButton.textContent = "Submit";
-      submitButton.disabled = false;
-      return;
-    }
+  if (!isFormValid()) {
+    submitButton.textContent = "Submit";
+    submitButton.disabled = false;
+    return;
+  }
 
-    if (isFormValid()) {
-      const email = getEmailValue();
-      const message = getMessageValue();
+  const email = getEmailValue();
+  const message = getMessageValue();
 
-      fetch("https://portfolio-jasper-aviles-projects.vercel.app/api/submit", {
-        method: "POST",
-        mode: "cors",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, message })
-      })
+  try {
+    const response = await fetch("https://portfolio-jasper-aviles-projects.vercel.app/api/submit", {
+      method: "POST",
+      mode: "cors",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email, message })
+    });
 
-      .then(res => res.ok ? res.json() : Promise.reject("Invalid response"))
-      .then(data => {
-        if (data.success) {
-          submitButton.textContent = "Submitted!";
-          setTimeout(() => {
-            submitButton.textContent = "Submit";
-          }, 3000); 
-          alert("Thank you for your message!");
-          gitbox.reset();
-          resetFormFeedback();
-        }
+    if (!response.ok) throw new Error("Invalid response");
 
-        else {
-          throw new Error("Unexpected response format");
-        }
-      })
-      
-      .catch(error => {
-        console.error("Submission failed:", error);
-        alert("Something went wrong. Please try again.");
+    const data = await response.json();
+
+    if (data.success) {
+      submitButton.textContent = "Submitted!";
+      setTimeout(() => {
         submitButton.textContent = "Submit";
-        submitButton.disabled = false;
-      });
+      }, 3000);
+      alert("Thank you for your message!");
+      gitbox.reset();
+      resetFormFeedback();
+    } 
+    
+    else {
+      throw new Error("Unexpected response format");
     }
-  });
+  } 
+  
+  catch (error) {
+    console.error("Submission failed:", error);
+    alert("Something went wrong. Please try again.");
+    submitButton.textContent = "Submit";
+    submitButton.disabled = false;
+  }
+});
+
 
   updateEmailFeedback();
   validateInputs();

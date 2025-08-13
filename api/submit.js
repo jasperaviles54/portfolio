@@ -12,8 +12,11 @@ export default async function handler(req, res) {
   res.setHeader("Access-Control-Allow-Credentials", "true");
 
   if (req.method === "OPTIONS") {
-    return res.status(200).end();
-  }
+  res.setHeader("Content-Length", "0");
+  res.setHeader("Vary", "Origin");
+  return res.status(204).end();
+}
+
 
   if (req.method === "POST") {
     const { email, message } = req.body;

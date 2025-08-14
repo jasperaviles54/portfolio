@@ -126,50 +126,43 @@ li {
     color: black;
 }
 
-#skills {
-  padding: 4rem 2rem;
-}
-
-.skills-grid {
-  display: grid;
-  gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-}
-
-.skill-box {
-  background-color: #fff;
-  padding: 1.5rem;
+.skills-box {
+  background-color: white;
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
-.skill-box h3 {
-  margin-bottom: 1rem;
-  font-size: 1.25rem;
+.skills-box h3 {
+  /*font-size: 1.25rem;*/
   color: #333;
 }
 
-.logo-row,
-.cert-row {
+.skill-item {
   display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: clamp(80px, 9vw, 10vw);
 }
 
-.logo-row img,
-.cert-row img {
-  height: 48px;
+.skill-item img {
+  width: clamp(72px, 8vw, 9vw);
+  aspect-ratio: 1/1;
   object-fit: contain;
-  transition: transform 0.3s ease;
+  margin-bottom: 0.5rem;
+  transition: transform 0.2s;
 }
 
-.logo-row img:hover,
-.cert-row img:hover {
+.skill-item img:hover {
   transform: scale(1.1);
 }
 
-.socials-container {
+.skill-item figcaption {
+  font-size: 0.85rem;
+  text-align: center;
+  color: #444;
+}
+
+
+.socials-box {
     border:2px solid black;
 }
 

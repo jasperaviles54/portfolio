@@ -4,7 +4,7 @@ const navbarLinks = [
   { href: "about.html", text: "About" },
   { href: "skills.html", text: "Skills" },
   { href: "#projects", text: "Projects" },
-  { href: "contact.html", text: "Contact" }
+  { href: "contacts.html", text: "Contacts" }
 ];
 
 const createNavLink = ({ href, text }) => {

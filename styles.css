@@ -1,16 +1,31 @@
-.background {
-    background-image: url('coding.gif');
-    background-size: cover;
-    background-position: center;
-    width: 100%;
+.video-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: -1;
 }
+
+.video-container video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100vw;
+  height: auto;
+  object-fit: cover;
+  background-repeat: repeat-y;
+}
+
 
 a:focus-visible {
     outline: 3px solid #25A978; 
 }
 
 .nav-color-1 {
-    background-color: #97e8ca;
+    background-color: #25A978;
 }
 
 .navbar a {
@@ -47,7 +62,7 @@ a:focus-visible {
     color: black;
     text-decoration: none;
     font-size: clamp(18px, 2vw, 3vw);
-    background-color: #cccccc;
+    background-color: #25A978;
 }
 
 @media (hover:hover) {
@@ -91,7 +106,7 @@ a:focus-visible {
 }
 
 #offcanvaslinks {
-    background-color: #25A978;
+    background-color: #97e8ca;
     height: 100vh;
     width: clamp(150px, 16vw, 17vw);
 }
@@ -105,17 +120,18 @@ li {
 }
 
 .sub-content {
-    background-color: #97e8ca;
+    background-color: #25A978;
     padding-top: clamp(100px, 11vh, 12vh);
 }
 
 .sub-content h2 {
     font-size: clamp(28px, 3vw, 4vw);
+    color: black;
 }
 
 .profile-image-radius {
     width: clamp(250px, 26vw, 27vw);
-    border: 2px solid #282828;
+    border: 2px solid black;
 }
 
 .about-text {
@@ -127,7 +143,7 @@ li {
 }
 
 .skills-box {
-  background-color: white;
+  background-color: #97e8ca;
   border-radius: 8px;
 }
 
@@ -164,6 +180,7 @@ li {
 
 .socials-box {
     border:2px solid black;
+    background-color: #97e8ca;
 }
 
 .social-icons {
@@ -183,13 +200,12 @@ li {
 
 .contact-number {
     font-size: clamp(20px, 2.5vw, 3vw);
-    color: #222;
+    color: black;
 }
 
 .contact-note {
     font-size: clamp(14px, 1.5vw, 2vw);
-    color: #222;
-    opacity: 80%;
+    color: black;
     margin-right: 20px;
 }
 
@@ -207,6 +223,8 @@ li {
     padding-top: clamp(32px, 3.5vh, 4vh);
     padding-left: clamp(16px, 2vw, 3vw);
     font-size: clamp(16px, 2vw, 3vw);
+    background-color: #97e8ca;
+    border-color: black;
 }
 
 #message {
@@ -216,6 +234,8 @@ li {
     padding-left: clamp(16px, 2vw, 3vw);
     font-size: clamp(16px, 2vw, 3vw);
     resize: none;
+    background-color: #97e8ca;
+    border-color: black;
 }
 
 #email-status {

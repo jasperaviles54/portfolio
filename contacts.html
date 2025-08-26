@@ -20,10 +20,10 @@
             Menu
         </button>
         <div class="flex-grow-1 text-center align-self-center">
-            <h1 class="title-margin ps-lg-3">Contacts</h1>
+            <h1 class="title-margin">Contacts</h1>
         </div>
     </header>
-    <main class="container-fluid sub-content position-relative pb-5 min-vh-100">
+    <main class="container-fluid sub-content position-relative min-vh-100">
         <div class="row">
             <div class="col-lg-2">
                 <div class="offcanvas offcanvas-start" id="offcanvaslinks">
@@ -63,12 +63,12 @@
                         <input type="email" class="form-control" id="email" placeholder="" required>
                         <label for="email" class="form-label">Your Email:</label>
                         <span id="email-status" class="form-text py-2" aria-live="polite"></span>
-                        <span class="input-warning" id="email-warning">Please fill out this field.</span>
+                        <span class="input-warning mt-1 ps-2 rounded" id="email-warning">Please fill out this field.</span>
                     </div>
                     <div class="form-floating mb-3">
                         <textarea class="form-control" id="message" rows="5" placeholder="" required></textarea>
                         <label for="message" class="form-label">Your Message:</label>
-                        <span class="input-warning" id="message-warning">Please fill out this field.</span>
+                        <span class="input-warning mt-1 ps-2 rounded" id="message-warning">Please fill out this field.</span>
                     </div>
                     <div class="d-flex justify-content-center">
                         <button type="submit" class="submit-button px-4" id="form-submit" disabled>Submit</button>

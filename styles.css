@@ -10,13 +10,9 @@
 
 .video-container video {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100vw;
-  height: auto;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  background-repeat: repeat-y;
 }
 
 
@@ -120,7 +116,7 @@ li {
 }
 
 .sub-content {
-    background-color: #25A978;
+    background-color: #00aa9a;
     padding-top: clamp(100px, 11vh, 12vh);
 }
 
@@ -177,7 +173,6 @@ li {
   color: #444;
 }
 
-
 .socials-box {
     border:2px solid black;
     background-color: #97e8ca;
@@ -205,6 +200,7 @@ li {
 
 .contact-note {
     font-size: clamp(14px, 1.5vw, 2vw);
+    font-weight: bold;
     color: black;
     margin-right: 20px;
 }
@@ -217,10 +213,21 @@ li {
     padding: 0px clamp(16px, 2vw, 3vw);
 }
 
+#gitbox label {
+    font-size: clamp(16px, 2vw, 3vw);
+    font-weight: bold;
+    background-color: transparent;
+    color: #282828;
+}
+
+#gitbox label::after{
+    background-color: #97e8ca;
+}
+
 #email {
-    height: unset;
     width: 100%;
-    padding-top: clamp(32px, 3.5vh, 4vh);
+    padding-top: clamp(48px, 5vh, 6vh);
+    padding-bottom: clamp(24px, 3vh, 4vh);
     padding-left: clamp(16px, 2vw, 3vw);
     font-size: clamp(16px, 2vw, 3vw);
     background-color: #97e8ca;
@@ -240,19 +247,24 @@ li {
 
 #email-status {
     font-size: clamp(14px, 1.5vw, 2vw);
-}
-
-label {
-    font-size: clamp(16px, 2vw, 3vw);
+    color: black;
 }
 
 .input-warning {
     font-size: clamp(14px, 1.5vw, 2vw);
-    color: red;
+    margin-right: clamp(190px, 20vw, 21vw);
+    background-color: #ff5e5a;
+    color: black;
 }
 
 .submit-button {
-    background-color: #25A978;
+    background-color: #97e8ca;
     border-radius: 50px;
+    border: 2px solid black;
     font-size: clamp(16px, 2vw, 3vw);
+}
+
+.submit-button:disabled {
+    color: #4A4041;
+    border-color: #4A4041;
 }

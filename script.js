@@ -3,7 +3,7 @@ const navbarToggler = document.querySelector('.navbar-toggler');
 const navbarLinks = [
   { href: "about.html", text: "About" },
   { href: "skills.html", text: "Skills" },
-  { href: "#projects", text: "Projects" },
+  { href: "projects.html", text: "Projects" },
   { href: "contacts.html", text: "Contacts" }
 ];
 

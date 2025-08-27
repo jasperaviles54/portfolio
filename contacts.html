@@ -15,15 +15,15 @@
     <noscript>
         <p class="text-center text-danger" role="alert">JavaScript is disabled in your browser. Some features may not work as expected.</p>
     </noscript>
-    <header class="header-bar d-flex">
+    <header class="header-bar">
         <button class="d-lg-none menu-button" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvaslinks">
             Menu
         </button>
-        <div class="flex-grow-1 text-center align-self-center">
+        <div class="title-wrapper">
             <h1 class="title-margin">Contacts</h1>
         </div>
     </header>
-    <main class="container-fluid sub-content position-relative min-vh-100">
+    <main class="container-fluid sub-content">
         <div class="row">
             <div class="col-lg-2">
                 <div class="offcanvas offcanvas-start" id="offcanvaslinks">
@@ -45,7 +45,7 @@
             <div class="col-12 col-lg-5 text-center pt-lg-5 mt-lg-2 px-4 px-lg-0 silt">
                 <div class="socials-box mx-lg-5 py-2">
                     <h2 class="mb-4 mt-3 fw-bold">My Social Links:</h2>
-                    <div class="social-icons mb-3 d-flex flex-wrap justify-content-center position-relative mx-auto">
+                    <div class="social-icons mb-3 mx-auto">
                         <a href="mailto:jasperaviles54@gmail.com" class="position-absolute top-0 start-0"><img src="contact/icons/gmail.svg" alt="Gmail"></a>
                         <a href="https://www.linkedin.com/in/jasperaviles" class="position-absolute top-0 end-0"><img src="contact/icons/linkedin.svg" alt="LinkedIn"></a>
                         <a href="https://www.github.com/jasperaviles54" class="position-absolute top-50 start-50 translate-middle"><img src="contact/icons/github.svg" alt="GitHub"></a>
@@ -54,10 +54,10 @@
                     </div>
                     <p class="contact-number">Mobile Number: 09158010762</p>
                 </div>
-                <p class="contact-note text-center mt-4 ms-2 d-none d-lg-block">Please feel free to reach out if you need further information.</p>
+                <p class="contact-note mt-4 ms-2 d-none d-lg-block">Please feel free to reach out if you need further information.</p>
             </div>
             <div class="col-12 col-lg-5 pt-lg-3 mt-4 mt-lg-0 d-flex flex-column silt">
-                <form id="gitbox" class="d-flex flex-column">
+                <form id="gitbox">
                     <h2 class="text-center mb-3 mt-2 fw-bold">Get in Touch</h2>
                     <div class="form-floating mb-3">
                         <input type="email" class="form-control" id="email" placeholder="" required>
@@ -71,10 +71,10 @@
                         <span class="input-warning mt-1 ps-2 rounded" id="message-warning">Please fill out this field.</span>
                     </div>
                     <div class="d-flex justify-content-center">
-                        <button type="submit" class="submit-button px-4" id="form-submit" disabled>Submit</button>
+                        <button type="submit" class="submit-button px-4 rounded-pill" id="form-submit" disabled>Submit</button>
                     </div>
                 </form>
-                <p class="contact-note text-center mt-2 ms-3 d-block d-lg-none">Please feel free to reach out if you need further information.</p>
+                <p class="contact-note mt-2 ms-3 d-block d-lg-none">Please feel free to reach out if you need further information.</p>
             </div>
         </div>
     </main>

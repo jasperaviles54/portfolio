@@ -1,20 +1,11 @@
 .video-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-  z-index: -1;
+    width: 100vw;
+    z-index: -1;
 }
 
-.video-container video {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+li {
+    padding: 5px 0px;
 }
-
 
 a:focus-visible {
     outline: 3px solid #25A978; 
@@ -26,7 +17,6 @@ a:focus-visible {
 
 .navbar a {
     color: #282828;
-    text-decoration: none;
     font-size: clamp(24px, 3vw, 4vw);
     margin: 0px clamp(15px, 2vw, 3vw);
 }
@@ -39,7 +29,6 @@ a:focus-visible {
 
 .main-content {
     font-family: 'Jacques Francois', serif;
-    color: white;
     min-height: 80vh;
     margin-top: 10vh;
 }
@@ -62,12 +51,12 @@ a:focus-visible {
 }
 
 @media (hover:hover) {
-.resume-button:hover {
-    background-color: #97e8ca;
-    padding: clamp(20px, 3vh, 4vh) clamp(40px, 5vw, 6vw);
-    color: #282828;
-    font-size: clamp(24px, 3vw, 4vw);
-}
+    .resume-button:hover {
+        background-color: #97E8CA;
+        padding: clamp(20px, 3vh, 4vh) clamp(40px, 5vw, 6vw);
+        color: #282828;
+        font-size: clamp(24px, 3vw, 4vw);
+    }
 }
 
 .resume-button:active {
@@ -84,45 +73,49 @@ a:focus-visible {
 }
 
 .header-bar {
+    display: flex;
     position: fixed;
     width: 100%;
     height: clamp(90px, 10vh, 11vh);
     background-color: black;
     color: white;
     font-family: '42dot Sans', serif;
-    z-index: 1;
+    z-index: 2;
 }
 
 .menu-button{
     font-size: clamp(24px, 3vw, 4vw);
 }
 
+.title-wrapper {
+    flex-grow: 1;
+    text-align: center;
+    align-self: center;
+}
+
 .title-margin {
     font-size: clamp(48px, 5vw, 6vw);
 }
 
-#offcanvaslinks {
-    background-color: #97e8ca;
-    height: 100vh;
-    width: clamp(150px, 16vw, 17vw);
-}
-
-li {
-    padding: 5px 0px;
-}
-
-.offcanvas-title {
-    font-size: clamp(24px, 3vw, 4vw);
-}
-
 .sub-content {
-    background-color: #00aa9a;
+    min-height: 100vh;
+    background-color: #00AA9A;
     padding-top: clamp(100px, 11vh, 12vh);
 }
 
 .sub-content h2 {
     font-size: clamp(28px, 3vw, 4vw);
     color: black;
+}
+
+#offcanvaslinks {
+    background-color: #97E8CA;
+    height: 100vh;
+    width: clamp(150px, 16vw, 17vw);
+}
+
+.offcanvas-title {
+    font-size: clamp(24px, 3vw, 4vw);
 }
 
 .profile-image-radius {
@@ -139,7 +132,7 @@ li {
 }
 
 .skills-box {
-  background-color: #97e8ca;
+  background-color: #97E8CA;
   border-radius: 8px;
 }
 
@@ -173,12 +166,20 @@ li {
   color: #444;
 }
 
+.silt{
+    font-family: 'Shadows Into Light Two', serif;
+}
+
 .socials-box {
     border:2px solid black;
-    background-color: #97e8ca;
+    background-color: #97E8CA;
 }
 
 .social-icons {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     aspect-ratio: 1/1;
     width: clamp(140px, 15vw, 16vw);
 }
@@ -199,17 +200,16 @@ li {
 }
 
 .contact-note {
+    text-align: center;
     font-size: clamp(14px, 1.5vw, 2vw);
     font-weight: bold;
     color: black;
     margin-right: 20px;
 }
 
-.silt{
-    font-family: 'Shadows Into Light Two', serif;
-}
-
 #gitbox {
+    display: flex;
+    flex-direction: column;
     padding: 0px clamp(16px, 2vw, 3vw);
 }
 
@@ -220,8 +220,8 @@ li {
     color: #282828;
 }
 
-#gitbox label::after{
-    background-color: #97e8ca;
+#gitbox label::after {
+    background-color: #97E8CA;
 }
 
 #email {
@@ -230,7 +230,7 @@ li {
     padding-bottom: clamp(24px, 3vh, 4vh);
     padding-left: clamp(16px, 2vw, 3vw);
     font-size: clamp(16px, 2vw, 3vw);
-    background-color: #97e8ca;
+    background-color: #97E8CA;
     border-color: black;
 }
 
@@ -241,7 +241,7 @@ li {
     padding-left: clamp(16px, 2vw, 3vw);
     font-size: clamp(16px, 2vw, 3vw);
     resize: none;
-    background-color: #97e8ca;
+    background-color: #97E8CA;
     border-color: black;
 }
 
@@ -253,13 +253,12 @@ li {
 .input-warning {
     font-size: clamp(14px, 1.5vw, 2vw);
     margin-right: clamp(190px, 20vw, 21vw);
-    background-color: #ff5e5a;
+    background-color: #ff5E5A;
     color: black;
 }
 
 .submit-button {
-    background-color: #97e8ca;
-    border-radius: 50px;
+    background-color: #97E8CA;
     border: 2px solid black;
     font-size: clamp(16px, 2vw, 3vw);
 }

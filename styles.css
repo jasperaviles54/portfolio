@@ -8,11 +8,11 @@ li {
 }
 
 a:focus-visible {
-    outline: 3px solid #25A978; 
+    outline: 3px solid #00AA9A; 
 }
 
 .nav-color-1 {
-    background-color: #25A978;
+    background-color: #00AA9A;
 }
 
 .navbar a {
@@ -47,7 +47,7 @@ a:focus-visible {
     color: black;
     text-decoration: none;
     font-size: clamp(18px, 2vw, 3vw);
-    background-color: #25A978;
+    background-color: #00AA9A;
 }
 
 @media (hover:hover) {
@@ -60,7 +60,7 @@ a:focus-visible {
 }
 
 .resume-button:active {
-    background-color: #25A978;
+    background-color: #00AA9A;
     padding: clamp(10px, 2vh, 3vh) clamp(20px, 3vw, 4vw);
     border: 2px solid black;
     color: white;
@@ -253,7 +253,7 @@ a:focus-visible {
 .input-warning {
     font-size: clamp(14px, 1.5vw, 2vw);
     margin-right: clamp(190px, 20vw, 21vw);
-    background-color: #ff5E5A;
+    background-color: #FF5E5A;
     color: black;
 }
 

@@ -84,6 +84,11 @@ a:focus-visible {
 }
 
 .menu-button{
+    border: 2px solid white;
+    border-radius: 25px;
+    background-color: transparent;
+    color: white;
+    margin: clamp(5px, 1vh, 2vh) clamp(10px, 2vw, 3vw);
     font-size: clamp(24px, 3vw, 4vw);
 }
 
@@ -93,8 +98,17 @@ a:focus-visible {
     align-self: center;
 }
 
-.title-margin {
-    font-size: clamp(48px, 5vw, 6vw);
+.title-layout {
+    font-weight: bold;
+    font-size: clamp(35px, 3.5vw, 6vw);
+}
+
+.home-button {
+    border: 2px solid white;
+    border-radius: 25px;
+    background-color: transparent;
+    margin: clamp(5px, 1vh, 2vh) clamp(10px, 2vw, 3vw);
+    font-size: clamp(24px, 3vw, 4vw);
 }
 
 .sub-content {
@@ -229,7 +243,7 @@ a:focus-visible {
     padding-top: clamp(48px, 5vh, 6vh);
     padding-bottom: clamp(24px, 3vh, 4vh);
     padding-left: clamp(16px, 2vw, 3vw);
-    font-size: clamp(16px, 2vw, 3vw);
+    font-size: clamp(12px, 1.5vw, 2vw);
     background-color: #97E8CA;
     border-color: black;
 }
@@ -239,7 +253,7 @@ a:focus-visible {
     width: 100%;
     padding-top: clamp(36px, 4vh, 5vh);
     padding-left: clamp(16px, 2vw, 3vw);
-    font-size: clamp(16px, 2vw, 3vw);
+    font-size: clamp(12px, 1.5vw, 2vw);
     resize: none;
     background-color: #97E8CA;
     border-color: black;

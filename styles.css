@@ -84,7 +84,6 @@ a:focus-visible {
 }
 
 .menu-button{
-    border: 2px solid white;
     border-radius: 25px;
     background-color: transparent;
     color: white;
@@ -106,7 +105,6 @@ a:focus-visible {
 .home-button {
     display: inline-flex;
     align-items: center;
-    border: 2px solid white;
     border-radius: 25px;
     background-color: transparent;
     color: white;

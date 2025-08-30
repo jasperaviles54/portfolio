@@ -84,7 +84,6 @@ a:focus-visible {
 }
 
 .menu-button{
-    border-radius: 25px;
     background-color: transparent;
     color: white;
     margin: clamp(5px, 1vh, 2vh) clamp(10px, 2vw, 3vw);
@@ -105,7 +104,6 @@ a:focus-visible {
 .home-button {
     display: inline-flex;
     align-items: center;
-    border-radius: 25px;
     background-color: transparent;
     color: white;
     text-decoration: none;

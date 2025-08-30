@@ -84,6 +84,7 @@ a:focus-visible {
 }
 
 .menu-button{
+    border-color: transparent;
     background-color: transparent;
     color: white;
     margin: clamp(5px, 1vh, 2vh) clamp(10px, 2vw, 3vw);
@@ -109,7 +110,7 @@ a:focus-visible {
     text-decoration: none;
     padding: 0px 6px;
     margin: clamp(5px, 1vh, 2vh) clamp(10px, 2vw, 3vw);
-    font-size: clamp(18px, 2vw, 3vw);
+    font-size: clamp(24px, 3vw, 4vw);
 }
 
 

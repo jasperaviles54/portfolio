@@ -1,6 +1,8 @@
-.video-container {
-    width: 100vw;
-    z-index: -1;
+.background {
+    background-image: url('bg.gif');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
 }
 
 li {

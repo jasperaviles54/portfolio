@@ -1,3 +1,10 @@
+if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+  document.querySelectorAll('video').forEach(v => {
+    v.setAttribute('playsinline', '');
+    v.setAttribute('webkit-playsinline', '');
+  });
+}
+
 const navbarToggler = document.querySelector('.navbar-toggler');
 
 const navbarLinks = [

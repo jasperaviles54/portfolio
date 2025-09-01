@@ -1,8 +1,6 @@
-.background {
-    background-image: url('bg.gif');
-    background-size: cover;
-    background-position: center;
-    width: 100%;
+.video-container {
+    width: 100vw;
+    z-index: -1;
 }
 
 li {
@@ -18,7 +16,7 @@ a:focus-visible {
 }
 
 .navbar a {
-    color: #282828;
+    color: black;
     font-size: clamp(24px, 3vw, 4vw);
     margin: 0px clamp(15px, 2vw, 3vw);
 }
@@ -289,4 +287,26 @@ a:focus-visible {
 .submit-button:disabled {
     color: #4A4041;
     border-color: #4A4041;
+}
+
+.page-progress {
+    margin-top: clamp(14px, 2vh, 3vh);
+    font-family: 'Courier New', monospace;
+    text-align: center;
+}
+
+.progress-label {
+    font-size: clamp(15px, 1.2vw, 2vw);
+    margin-bottom: 0.3rem;
+}
+
+.progress-bar {
+    width: clamp(100px, 11vw, 12vw);
+    height: clamp(20px, 3vh, 4vh);
+    border-radius: 5px;
+}
+
+.progress-fill {
+    height: 100%;
+    background-color: green;
 }

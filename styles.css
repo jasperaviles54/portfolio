@@ -3,6 +3,10 @@
     z-index: -1;
 }
 
+video::-webkit-media-controls {
+    display: none !important;
+}
+
 li {
     padding: 5px 0px;
 }
@@ -157,7 +161,7 @@ a:focus-visible {
     border-radius: clamp(8px, 1vw, 2vw);
 }
 
-.skills-box h3 {
+.skills-box h2 {
     font-size: clamp(20px, 3vw, 4vw);
 }
 
@@ -181,7 +185,7 @@ a:focus-visible {
 }
 
 .skill-item figcaption {
-    font-size: clamp(18, 2vw, 3vw);
+    font-size: clamp(18px, 1.5vw, 2vw);
     text-align: center;
 }
 
@@ -215,6 +219,11 @@ a:focus-visible {
 
 .contact-number {
     font-size: clamp(20px, 2.5vw, 3vw);
+    color: black;
+}
+
+.contact-number a {
+    text-decoration: none;
     color: black;
 }
 
@@ -342,7 +351,7 @@ a:focus-visible {
 }
 
 .project-label {
-    color: white;
+    background-color: #97E8CA;
     font-size: clamp(28px, 3vw, 4vw);
     border: 2px solid black;
     border-radius: clamp(8px, 1vw, 2vw);
@@ -350,7 +359,7 @@ a:focus-visible {
 
 .demo-button {
     display: inline-block;
-    background-color: #97E8CA;
+    background-color: #67DDB1;
     color: black;
     text-decoration: none;
     font-size: clamp(16px, 2vw, 3vw);
@@ -359,9 +368,10 @@ a:focus-visible {
 }
 
 .view-button {
-    color: white;
+    background-color: #67DDB1;
+    color: black;
     text-decoration: none;
     font-size: clamp(16px, 2vw, 3vw);
-    border: 2px solid white;
+    border: 2px solid black;
     border-radius: clamp(8px, 1vw, 2vw);
 }

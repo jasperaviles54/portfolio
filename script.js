@@ -41,20 +41,35 @@ const offcanvasMenu = document.getElementById('offcanvaslinks');
 const menuButton = document.querySelector('.menu-button');
 
 if (navbarToggler) {
-  navbarToggler.addEventListener('click', () => {
-  const isCollapsed = navbarToggler.classList.contains('collapsed');
-  navbarToggler.classList.toggle('collapsed');
+  const navbarCollapse = document.getElementById('navbarlinks');
+  const updateToggler = (expanded) => {
+    navbarToggler.textContent = expanded ? 'Menu ▲' : 'Menu ▼';
+    navbarToggler.setAttribute(
+      'aria-label',
+      expanded ? 'Collapse navigation menu' : 'Expand navigation menu'
+    );
+  };
 
-  navbarToggler.textContent = isCollapsed ? 'Menu ▼' : 'Menu ▲';
-  navbarToggler.setAttribute("aria-label", isCollapsed ? "Expand navigation menu" : "Collapse navigation menu");
-  });
-};
+  updateToggler(navbarCollapse.classList.contains('show'));
+
+  navbarCollapse.addEventListener('shown.bs.collapse', () => updateToggler(true));
+  navbarCollapse.addEventListener('hidden.bs.collapse', () => updateToggler(false));
+}
+
 
 if (offcanvasMenu) {
   function handleOffcanvasVisibility() {
     const isButtonVisible = window.getComputedStyle(menuButton).display !== 'none';
 
-    isButtonVisible ? offcanvasMenu.classList.remove("show") : offcanvasMenu.classList.add("show");
+    if (isButtonVisible) {
+      offcanvasMenu.classList.remove("show");
+      offcanvasMenu.setAttribute("aria-hidden", "true");
+      menuButton.setAttribute("aria-expanded", "false");
+    } else {
+      offcanvasMenu.classList.add("show");
+      offcanvasMenu.setAttribute("aria-hidden", "false");
+      menuButton.setAttribute("aria-expanded", "true");
+    }
   };
 
   offcanvasMenu.addEventListener('hidden.bs.offcanvas', handleOffcanvasVisibility);
@@ -63,13 +78,10 @@ if (offcanvasMenu) {
   window.addEventListener("resize", handleOffcanvasVisibility);
 };
 
-const iconLinks = document.querySelectorAll('.social-icons a');
-if (iconLinks) {
-  iconLinks.forEach(link => {
+document.querySelectorAll('.social-icons a').forEach(link => {
     link.setAttribute('target', '_blank');
     link.setAttribute('rel', 'noopener nofollow external');
   });
-}
 
 const handleGitboxInteractions = () => {
   const gitbox = document.getElementById("gitbox");
@@ -83,7 +95,7 @@ const handleGitboxInteractions = () => {
 
   const emailPattern = /^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}(?:\.[a-zA-Z]{2,})*$/;
   const getEmailValue = () => emailInput?.value?.trim() || "";
-  const getMessageValue = () => messageInput.value.trim();
+  const getMessageValue = () => messageInput?.value?.trim() || "";
   const isEmailValid = () => emailPattern.test(getEmailValue());
 
   const areElementsReady = () => gitbox && emailInput && messageInput && submitButton && status && emailError && messageError;
@@ -221,19 +233,24 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         window.open(
           `java-demo.html?jar=${encodeURIComponent(jar)}&width=${javaWidth}&height=${javaHeight}`,
-          "_blank"
+          "_blank", "noopener=yes"
         );
       });
     });
 
   if (document.body.classList.contains("java")) {
-    const params = new URLSearchParams(window.location.search);
-    const jar = params.get("jar");
-    const width = parseInt(params.get("width"), 10);
-    const height = parseInt(params.get("height"), 10);
+    try {
+      const params = new URLSearchParams(window.location.search);
+      const jar = params.get("jar");
+      const width = parseInt(params.get("width"), 10);
+      const height = parseInt(params.get("height"), 10);
 
-    await cheerpjInit({ enableSwing: true });
-    cheerpjCreateDisplay(width, height, document.getElementById("java-container"));
-    cheerpjRunJar(jar);
+      await cheerpjInit({ enableSwing: true });
+      cheerpjCreateDisplay(width, height, document.getElementById("java-container"));
+      cheerpjRunJar(jar);
+    } catch (error) {
+      console.error("Error initializing CheerpJ:", error);
+      alert("Something went wrong.");
+    }
   }
 });

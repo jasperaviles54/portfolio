@@ -153,38 +153,36 @@ a:focus-visible {
 }
 
 .skills-box {
-  background-color: #97E8CA;
-  border-radius: 8px;
+    background-color: #97E8CA;
+    border-radius: clamp(8px, 1vw, 2vw);
 }
 
 .skills-box h3 {
-  /*font-size: 1.25rem;*/
-  color: #333;
+    font-size: clamp(20px, 3vw, 4vw);
 }
 
 .skill-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: clamp(80px, 9vw, 10vw);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: clamp(80px, 9vw, 10vw);
 }
 
 .skill-item img {
-  width: clamp(72px, 8vw, 9vw);
-  aspect-ratio: 1/1;
-  object-fit: contain;
-  margin-bottom: 0.5rem;
-  transition: transform 0.2s;
+    width: clamp(72px, 8vw, 9vw);
+    aspect-ratio: 1/1;
+    object-fit: contain;
+    margin-bottom: 0.5rem;
+    transition: transform 0.2s;
 }
 
 .skill-item img:hover {
-  transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 .skill-item figcaption {
-  font-size: 0.85rem;
-  text-align: center;
-  color: #444;
+    font-size: clamp(18, 2vw, 3vw);
+    text-align: center;
 }
 
 .silt{
@@ -309,4 +307,61 @@ a:focus-visible {
 .progress-fill {
     height: 100%;
     background-color: green;
+}
+
+#java-container {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+    margin: auto;
+}
+
+.java {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #00AA9A;
+}
+
+.project-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    width: clamp(300px, 31vw, 32vw);
+    height: clamp(230px, 24vh, 25vh);
+}
+
+.project-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.project-label {
+    color: white;
+    font-size: clamp(28px, 3vw, 4vw);
+    border: 2px solid black;
+    border-radius: clamp(8px, 1vw, 2vw);
+}
+
+.demo-button {
+    display: inline-block;
+    background-color: #97E8CA;
+    color: black;
+    text-decoration: none;
+    font-size: clamp(16px, 2vw, 3vw);
+    border: 2px solid black;
+    border-radius: clamp(8px, 1vw, 2vw);
+}
+
+.view-button {
+    color: white;
+    text-decoration: none;
+    font-size: clamp(16px, 2vw, 3vw);
+    border: 2px solid white;
+    border-radius: clamp(8px, 1vw, 2vw);
 }

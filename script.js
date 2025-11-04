@@ -117,7 +117,6 @@ const handleGitboxInteractions = () => {
   };
 
   const validateInputs = () => {
-    const isMessageFilled = getMessageValue() !== "";
     submitButton.disabled = !isFormValid();
 
     if (emailError) {
@@ -210,7 +209,31 @@ const handleGitboxInteractions = () => {
   validateInputs();
 };
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", async () => {
   if (typeof renderLinks === "function") renderLinks();
   if (typeof handleGitboxInteractions === "function") handleGitboxInteractions();
+
+    document.querySelectorAll('.run-java').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const jar = btn.dataset.jar;
+        const javaWidth = btn.dataset.width;
+        const javaHeight = btn.dataset.height;
+
+        window.open(
+          `java-demo.html?jar=${encodeURIComponent(jar)}&width=${javaWidth}&height=${javaHeight}`,
+          "_blank"
+        );
+      });
+    });
+
+  if (document.body.classList.contains("java")) {
+    const params = new URLSearchParams(window.location.search);
+    const jar = params.get("jar");
+    const width = parseInt(params.get("width"), 10);
+    const height = parseInt(params.get("height"), 10);
+
+    await cheerpjInit({ enableSwing: true });
+    cheerpjCreateDisplay(width, height, document.getElementById("java-container"));
+    cheerpjRunJar(jar);
+  }
 });

@@ -357,17 +357,7 @@ a:focus-visible {
     border-radius: clamp(8px, 1vw, 2vw);
 }
 
-.demo-button {
-    display: inline-block;
-    background-color: #67DDB1;
-    color: black;
-    text-decoration: none;
-    font-size: clamp(16px, 2vw, 3vw);
-    border: 2px solid black;
-    border-radius: clamp(8px, 1vw, 2vw);
-}
-
-.view-button {
+.project-button {
     background-color: #67DDB1;
     color: black;
     text-decoration: none;

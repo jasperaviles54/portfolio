@@ -3,12 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css2?family=42dot+Sans&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light+Two&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Get in touch with Jasper T. Aviles — email, LinkedIn, GitHub, and contact form.">
+    <meta property="og:title" content="Contact — Jasper T. Aviles">
+    <meta property="og:description" content="Get in touch with Jasper T. Aviles — email, LinkedIn, GitHub, and contact form.">
+    <meta property="og:image" content="https://jasperaviles54.github.io/portfolio/profile.png">
+    <meta property="og:url" content="https://jasperaviles54.github.io/portfolio/contacts.html">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Contact — Jasper T. Aviles">
+    <meta name="twitter:description" content="Get in touch with Jasper T. Aviles — email, LinkedIn, GitHub, and contact form.">
+    <meta name="twitter:image" content="https://jasperaviles54.github.io/portfolio/profile.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:wght@600;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">    
     <title>Contacts</title>
+    <script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
@@ -16,22 +28,26 @@
     <noscript>
         <meta http-equiv="refresh" content="0;url=https://jasperaviles54.github.io/portfolio-noscript/contacts.html">
     </noscript>
+    <a href="#main-content" class="skip-link">Skip to content</a>
     <header class="header-bar">
-        <div class="page-progress offset-lg-2 d-none d-lg-block" aria-label="Page Number">
-            <div class="progress-label">Page 4 of 4</div>
-            <div class="progress-bar border border-2 border-white">
-                <div class="progress-fill w-100"></div>
-            </div>
-        </div>
-        <button class="d-lg-none menu-button" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvaslinks">
+        <nav class="page-breadcrumb offset-lg-2 d-none d-lg-block" aria-label="Breadcrumb">
+            <a href="index.html" class="page-breadcrumb-link">Home</a>
+            <span class="page-breadcrumb-sep" aria-hidden="true">/</span>
+            <span class="page-breadcrumb-current" aria-current="page">Contacts</span>
+        </nav>
+        <button class="d-lg-none menu-button" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvaslinks" aria-label="Open menu">
             <i class="bi bi-list"></i><span class="d-none d-sm-inline-block">Menu</span>
         </button>
         <div class="title-wrapper">
             <h1 class="title-layout ms-2 ms-lg-0 mt-2 mt-lg-0">Contacts</h1>
         </div>
-        <a href="index.html" class="home-button gap-2">
-            <i class="bi bi-house-door"></i><span class="d-none d-sm-block">Home</span> 
+        <a href="index.html" class="home-button d-lg-none gap-2" aria-label="Go to home page">
+            <i class="bi bi-house-door"></i><span class="d-none d-sm-block">Home</span>
         </a>
+        <a href="resume.html" class="header-cta d-none d-lg-flex align-items-center gap-2 me-lg-4" aria-label="View My Resume">
+            <i class="bi bi-file-earmark-person"></i><span>Resume</span>
+        </a>
+        <button class="theme-toggle d-none d-lg-inline-flex" aria-label="Toggle theme"></button>
     </header>
     <main class="container-fluid sub-content">
         <div class="row">
@@ -52,49 +68,52 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-lg-5 text-center pt-lg-5 mt-lg-2 px-4 px-lg-0 silt">
-                <div class="socials-box mx-lg-5 py-2">
-                    <h2 class="mb-4 mt-3 fw-bold">My Social Links:</h2>
-                    <div class="social-icons mb-3 mx-auto">
-                        <a href="mailto:jasperaviles54@gmail.com" class="position-absolute top-0 start-0"><img src="contact/icons/gmail.svg" alt="Gmail"></a>
-                        <a href="https://www.linkedin.com/in/jasperaviles" class="position-absolute top-0 end-0"><img src="contact/icons/linkedin.svg" alt="LinkedIn"></a>
-                        <a href="https://www.github.com/jasperaviles54" class="position-absolute top-50 start-50 translate-middle"><img src="contact/icons/github.svg" alt="GitHub"></a>
-                        <a href="https://www.m.me/jasper.aviles.665257" class="position-absolute bottom-0 start-0"><img src="contact/icons/messenger.svg" alt="Messenger"></a>
-                        <a href="viber://add?number=639158010762" class="position-absolute bottom-0 end-0"><img src="contact/icons/viber.svg" alt="Viber"></a>
+            <div id="main-content" tabindex="-1" class="col-12 col-lg-10 offset-lg-2">
+                <div class="row g-4">
+                    <div class="col-12 col-lg-5 text-center">
+                        <div class="socials-box">
+                            <h2>Connect</h2>
+                            <div class="social-icons mb-3 mx-auto">
+                                <a href="mailto:jasperaviles54@gmail.com" class="position-absolute top-0 start-0" aria-label="Email"><img src="contact/icons/gmail.svg" alt="Gmail" width="48" height="48" loading="lazy" decoding="async"></a>
+                                <a href="https://www.linkedin.com/in/jasperaviles" class="position-absolute top-0 end-0" target="_blank" rel="noopener" aria-label="LinkedIn"><img src="contact/icons/linkedin.svg" alt="LinkedIn" width="48" height="48" loading="lazy" decoding="async"></a>
+                                <a href="https://www.github.com/jasperaviles54" class="position-absolute top-50 start-50 translate-middle" target="_blank" rel="noopener" aria-label="GitHub"><img src="contact/icons/github.svg" alt="GitHub logo" width="48" height="48" loading="lazy" decoding="async"></a>
+                                <a href="https://www.m.me/jasper.aviles.665257" class="position-absolute bottom-0 start-0" target="_blank" rel="noopener" aria-label="Messenger"><img src="contact/icons/messenger.svg" alt="Messenger" width="48" height="48" loading="lazy" decoding="async"></a>
+                                <a href="viber://add?number=639158010762" class="position-absolute bottom-0 end-0" aria-label="Viber"><img src="contact/icons/viber.svg" alt="Viber" width="48" height="48" loading="lazy" decoding="async"></a>
+                            </div>
+                            <p class="contact-number">Mobile: <a href="tel:+639158010762">09158010762</a></p>
+                        </div>
+                        <p class="contact-note mt-3 d-none d-lg-block">Please feel free to reach out if you need further information.</p>
                     </div>
-                    <p class="contact-number">Mobile Number: <a href="tel:+639158010762">09158010762</a></p>
-                </div>
-                <p class="contact-note mt-4 ms-2 d-none d-lg-block">Please feel free to reach out if you need further information.</p>
-            </div>
-            <div class="col-12 col-lg-5 pt-lg-3 mt-4 mt-lg-0 d-flex flex-column silt">
-                <form id="gitbox">
-                    <h2 class="text-center mb-3 mt-2 fw-bold">Get in Touch</h2>
-                    <div class="form-floating mb-3">
-                        <input type="email" class="form-control" id="email" placeholder="" required>
-                        <label for="email" class="form-label">Your Email:</label>
-                        <span id="email-status" class="form-text py-2" aria-live="polite"></span>
-                        <span class="input-warning mt-1 ps-2 rounded" id="email-warning">Please fill out this field.</span>
+                    <div class="col-12 col-lg-7">
+                        <form id="gitbox">
+                            <h2>Get in Touch</h2>
+                            <div class="form-floating mb-3">
+                                <input type="email" class="form-control" id="email" placeholder="" required>
+                                <label for="email" class="form-label">Your Email:</label>
+                                <span id="email-status" class="form-text py-2" aria-live="polite"></span>
+                                <span class="input-warning mt-1 ps-2 rounded" id="email-warning">Please fill out this field.</span>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <textarea class="form-control" id="message" rows="7" placeholder="" required></textarea>
+                                <label for="message" class="form-label">Your Message:</label>
+                                <span class="input-warning mt-1 ps-2 rounded" id="message-warning">Please fill out this field.</span>
+                            </div>
+
+                            <div style="position:absolute;left:-9999px" aria-hidden="true">
+                                <label for="website">Website</label>
+                                <input type="text" name="website" id="website" tabindex="-1" autocomplete="off">
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <button type="submit" class="submit-button" id="form-submit" disabled>Submit</button>
+                            </div>
+                        </form>
+                        <p class="contact-note mt-3 d-block d-lg-none">Please feel free to reach out if you need further information.</p>
                     </div>
-                    <div class="form-floating mb-3">
-                        <textarea class="form-control" id="message" rows="7" placeholder="" required></textarea>
-                        <label for="message" class="form-label">Your Message:</label>
-                        <span class="input-warning mt-1 ps-2 rounded" id="message-warning">Please fill out this field.</span>
-                    </div>
-                    <div class="d-flex justify-content-center">
-                        <button type="submit" class="submit-button px-4 rounded-pill mb-1" id="form-submit" disabled>Submit</button>
-                    </div>
-                </form>
-                <p class="contact-note mt-2 ms-3 d-block d-lg-none">Please feel free to reach out if you need further information.</p>
-            </div>
-        </div>
-        <div class="page-progress d-block d-lg-none pb-3 text-black" aria-label="Page Number">
-            <div class="progress-label">Page 4 of 4</div>
-            <div class="d-flex justify-content-center">
-                <div class="progress-bar border border-2 border-black">
-                    <div class="progress-fill w-100"></div>
                 </div>
             </div>
         </div>
     </main>
+    <!-- Toast notification -->
+    <div id="toast" class="toast-notification" role="status" aria-live="polite"></div>
 </body>
 </html>

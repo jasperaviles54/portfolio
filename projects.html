@@ -1,36 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css2?family=42dot+Sans&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <meta name="description" content="Projects by Jasper T. Aviles — Java Swing applications, web demos, and more.">
+    <meta property="og:title" content="Projects — Jasper T. Aviles">
+    <meta property="og:description" content="Projects by Jasper T. Aviles — Java Swing applications, web demos, and more.">
+    <meta property="og:image" content="https://jasperaviles54.github.io/portfolio/profile.png">
+    <meta property="og:url" content="https://jasperaviles54.github.io/portfolio/projects.html">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Projects — Jasper T. Aviles">
+    <meta name="twitter:description" content="Projects by Jasper T. Aviles — Java Swing applications, web demos, and more.">
+    <meta name="twitter:image" content="https://jasperaviles54.github.io/portfolio/profile.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:wght@600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
     <title>Projects</title>
+    <script defer src="/_vercel/insights/script.js"></script>
 </head>
+
 <body>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
     <script src="script.js" defer></script>
     <noscript>
         <meta http-equiv="refresh" content="0;url=https://jasperaviles54.github.io/portfolio-noscript/projects.html">
     </noscript>
+    <a href="#main-content" class="skip-link">Skip to content</a>
     <header class="header-bar">
-        <div class="page-progress offset-lg-2 d-none d-lg-block" aria-label="Page Number">
-            <div class="progress-label">Page 3 of 4</div>
-            <div class="progress-bar border border-2 border-white">
-                <div class="progress-fill w-75"></div>
-            </div>
-        </div>
-        <button class="d-lg-none menu-button" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvaslinks">
+        <nav class="page-breadcrumb offset-lg-2 d-none d-lg-block" aria-label="Breadcrumb">
+            <a href="index.html" class="page-breadcrumb-link">Home</a>
+            <span class="page-breadcrumb-sep" aria-hidden="true">/</span>
+            <span class="page-breadcrumb-current" aria-current="page">Projects</span>
+        </nav>
+        <button class="d-lg-none menu-button" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvaslinks" aria-label="Open menu">
             <i class="bi bi-list"></i><span class="d-none d-sm-inline-block">Menu</span>
         </button>
         <div class="title-wrapper">
             <h1 class="title-layout ms-2 ms-lg-0 mt-2 mt-lg-0">Projects</h1>
         </div>
-        <a href="index.html" class="home-button gap-2">
-            <i class="bi bi-house-door"></i><span class="d-none d-sm-block">Home</span> 
+        <a href="index.html" class="home-button d-lg-none gap-2" aria-label="Go to home page">
+            <i class="bi bi-house-door"></i><span class="d-none d-sm-block">Home</span>
         </a>
+        <a href="resume.html"
+            class="header-cta d-none d-lg-flex align-items-center gap-2 me-lg-4" aria-label="View My Resume">
+            <i class="bi bi-file-earmark-person"></i><span>Resume</span>
+        </a>
+        <button class="theme-toggle d-none d-lg-inline-flex" aria-label="Toggle theme"></button>
     </header>
     <main class="container-fluid sub-content">
         <div class="row justify-content-center gap-4">
@@ -40,64 +65,93 @@
                         <h1 class="offcanvas-title">
                             Menu
                         </h1>
-                        <button type="button" class="d-lg-none btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close">
+                        <button type="button" class="d-lg-none btn-close text-reset" data-bs-dismiss="offcanvas"
+                            aria-label="Close">
                         </button>
                     </div>
                     <div class="offcanvas-body">
-                        <nav class="navbar d-flex justify-content-center" aria-label="Navigation Menu" role="navigation">
+                        <nav class="navbar d-flex justify-content-center" aria-label="Navigation Menu"
+                            role="navigation">
                             <ul class="navbar-nav nav-links">
                             </ul>
                         </nav>
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-6 col-lg-10 offset-lg-2">
-                <section class="row mb-2 mx-lg-5">
-                    <article class="col-12 col-lg-6 text-center gy-2">
-                        <h2 class="project-label pb-1">Just Pair N' Ichi Shoes</h2>
-                        <div class="project-logo mx-auto">
-                            <img src="projects/logos/JPNIShoes.png" alt="JPNIShoes thumbnail">
-                        </div>
-                        <div class="my-2">
-                            <button type="button" class="run-java project-button d-inline-block p-2" data-jar="/app/portfolio/JPNIShoes.jar" data-width="1000" data-height="700" aria-label="Run Just Pair N' Ichi Shoes Demo">Run Demo</button>
-                            <a href="https://github.com/jasperaviles54/JPNIShoes" target="_blank" rel="noopener" class="project-button p-2" aria-label="View Just Pair N' Ichi Shoes Source Code">View Code</a>
+            <div id="main-content" tabindex="-1" class="col-12 col-md-6 col-lg-10 offset-lg-2">
+                <div class="row g-4 mx-lg-5">
+                    <article class="col-12 col-lg-6">
+                        <div class="project-card">
+                            <div class="project-logo">
+                                <img src="projects/logos/JPNIShoes.png" alt="JPNIShoes thumbnail" width="1199" height="839" loading="lazy" decoding="async">
+                            </div>
+                            <div class="project-card-body">
+                                <h2 class="project-title">Just Pair N' Ichi Shoes</h2>
+                                <div class="project-tech-stack">
+                                    <span class="tech-badge">Java</span>
+                                    <span class="tech-badge">Swing</span>
+                                    <span class="tech-badge">CheerpJ</span>
+                                </div>
+                                <div class="project-actions">
+                                    <button type="button" class="run-java project-button"
+                                        data-jar="/app/portfolio/JPNIShoes.jar" data-width="1000" data-height="700"
+                                        aria-label="Run Just Pair N' Ichi Shoes Demo">Run Demo</button>
+                                    <a href="https://github.com/jasperaviles54/JPNIShoes" target="_blank" rel="noopener"
+                                        class="project-button"
+                                        aria-label="View Just Pair N' Ichi Shoes Source Code">View Code</a>
+                                </div>
+                            </div>
                         </div>
                     </article>
 
-                    <article class="col-12 col-lg-6 text-center gy-2">
-                        <h2 class="project-label pb-1">Someone's Eatery</h2>
-                        <div class="project-logo mx-auto">
-                            <img src="projects/logos/Seatery.png" alt="Seatery thumbnail">
-                        </div>
-                        <div class="my-2">
-                            <button type="button" class="run-java project-button d-inline-block p-2" data-jar="/app/portfolio/Seatery.jar" data-width="850" data-height="500" aria-label="Run Someone's Eatery Demo">Run Demo</button>
-                            <a href="https://github.com/jasperaviles54/Seatery" target="_blank" rel="noopener" class="project-button p-2" aria-label="View Someone's Eatery Source Code">View Code</a>
+                    <article class="col-12 col-lg-6">
+                        <div class="project-card">
+                            <div class="project-logo">
+                                <img src="projects/logos/Seatery.png" alt="Seatery thumbnail" width="1275" height="749" loading="lazy" decoding="async">
+                            </div>
+                            <div class="project-card-body">
+                                <h2 class="project-title">Someone's Eatery</h2>
+                                <div class="project-tech-stack">
+                                    <span class="tech-badge">Java</span>
+                                    <span class="tech-badge">Swing</span>
+                                    <span class="tech-badge">CheerpJ</span>
+                                </div>
+                                <div class="project-actions">
+                                    <button type="button" class="run-java project-button"
+                                        data-jar="/app/portfolio/Seatery.jar" data-width="850" data-height="500"
+                                        aria-label="Run Someone's Eatery Demo">Run Demo</button>
+                                    <a href="https://github.com/jasperaviles54/Seatery" target="_blank" rel="noopener"
+                                        class="project-button" aria-label="View Someone's Eatery Source Code">View
+                                        Code</a>
+                                </div>
+                            </div>
                         </div>
                     </article>
-                </section>
 
-                <section class="row mb-2 mx-lg-5">
-                    <article class="col-12 col-lg-6 text-center gy-2">
-                        <h2 class="project-label pb-1">Mathwiz</h2>
-                        <div class="project-logo mx-auto">
-                            <img src="projects/logos/Mathwiz.jpeg" alt="Mathwiz thumbnail">
-                        </div>
-                        <div class="my-2">
-                            <a href="https://jasperaviles54.github.io/Mathwiz/" target="_blank" rel="noopener" class="project-button d-inline-block p-2" aria-label="Run Mathwiz Website">Run Website</a>
-                            <a href="https://github.com/jasperaviles54/Mathwiz" target="_blank" rel="noopener" class="project-button p-2" aria-label="View Mathwiz Source Code">View Code</a>
+                    <article class="col-12 col-lg-6">
+                        <div class="project-card">
+                            <div class="project-logo">
+                                <img src="projects/logos/Mathwiz.jpeg" alt="Mathwiz thumbnail" width="1234" height="881" loading="lazy" decoding="async">
+                            </div>
+                            <div class="project-card-body">
+                                <h2 class="project-title">Mathwiz</h2>
+                                <div class="project-tech-stack">
+                                    <span class="tech-badge">HTML</span>
+                                    <span class="tech-badge">CSS</span>
+                                </div>
+                                <div class="project-actions">
+                                    <a href="https://jasperaviles54.github.io/Mathwiz/" target="_blank" rel="noopener"
+                                        class="project-button" aria-label="Run Mathwiz Website">Run Website</a>
+                                    <a href="https://github.com/jasperaviles54/Mathwiz" target="_blank" rel="noopener"
+                                        class="project-button" aria-label="View Mathwiz Source Code">View Code</a>
+                                </div>
+                            </div>
                         </div>
                     </article>
-                </section>
-            </div>
-        </div>
-        <div class="page-progress d-block d-lg-none pb-3 text-black" aria-label="Page Number">
-            <div class="progress-label">Page 3 of 4</div>
-            <div class="d-flex justify-content-center">
-                <div class="progress-bar border border-2 border-black">
-                    <div class="progress-fill w-75"></div>
                 </div>
             </div>
         </div>
     </main>
 </body>
+
 </html>

@@ -3,11 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css2?family=42dot+Sans&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Learn about Jasper T. Aviles — an Information Systems student with skills in programming, analytics, and problem-solving.">
+    <meta property="og:title" content="About — Jasper T. Aviles">
+    <meta property="og:description" content="Learn about Jasper T. Aviles — an Information Systems student with skills in programming, analytics, and problem-solving.">
+    <meta property="og:image" content="https://jasperaviles54.github.io/portfolio/profile.png">
+    <meta property="og:url" content="https://jasperaviles54.github.io/portfolio/about.html">
+    <meta property="og:type" content="profile">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="About — Jasper T. Aviles">
+    <meta name="twitter:description" content="Learn about Jasper T. Aviles — an Information Systems student with skills in programming and problem-solving.">
+    <meta name="twitter:image" content="https://jasperaviles54.github.io/portfolio/profile.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:wght@600;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
     <title>About Me</title>
+    <script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
@@ -15,22 +28,26 @@
     <noscript>
         <meta http-equiv="refresh" content="0;url=https://jasperaviles54.github.io/portfolio-noscript/about.html">
     </noscript>
+    <a href="#main-content" class="skip-link">Skip to content</a>
     <header class="header-bar">
-        <div class="page-progress offset-lg-2 d-none d-lg-block" aria-label="Page Number">
-            <div class="progress-label">Page 1 of 4</div>
-            <div class="progress-bar border border-2 border-white">
-                <div class="progress-fill w-25"></div>
-            </div>
-        </div>
-        <button class="d-lg-none menu-button" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvaslinks">
+        <nav class="page-breadcrumb offset-lg-2 d-none d-lg-block" aria-label="Breadcrumb">
+            <a href="index.html" class="page-breadcrumb-link">Home</a>
+            <span class="page-breadcrumb-sep" aria-hidden="true">/</span>
+            <span class="page-breadcrumb-current" aria-current="page">About</span>
+        </nav>
+        <button class="d-lg-none menu-button" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvaslinks" aria-label="Open menu">
             <i class="bi bi-list"></i><span class="d-none d-sm-inline-block">Menu</span>
         </button>
         <div class="title-wrapper">
             <h1 class="title-layout ms-2 ms-lg-0 mt-2 mt-lg-0">About Me</h1>
         </div>
-        <a href="index.html" class="home-button gap-2">
-            <i class="bi bi-house-door"></i><span class="d-none d-sm-block">Home</span> 
+        <a href="index.html" class="home-button d-lg-none gap-2" aria-label="Go to home page">
+            <i class="bi bi-house-door"></i><span class="d-none d-sm-block">Home</span>
         </a>
+        <a href="resume.html" class="header-cta d-none d-lg-flex align-items-center gap-2 me-lg-4" aria-label="View My Resume">
+            <i class="bi bi-file-earmark-person"></i><span>Resume</span>
+        </a>
+        <button class="theme-toggle d-none d-lg-inline-flex" aria-label="Toggle theme"></button>
     </header>
     <main class="container-fluid sub-content">
         <div class="row align-items-center mt-2 mt-lg-5">
@@ -51,19 +68,18 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-lg-4 text-center">
-                <img src="profile.png" class="rounded-circle profile-image-radius" alt="Profile Image">
-                <h2 class="mt-3">Jasper T. Aviles</h2>
-            </div>
-            <div class="col-12 col-lg-6">
-                <p class="about-text">I am currently a student taking Information Systems with proficient skills in programming, analytics, and problem-solving. My technical expertise includes the use of various programming languages, including HTML, CSS, JavaScript, C++, and Java. As a receptive learner, I accept challenges and find opportunities to expand my knowledge. I also value honesty, empathy, and flexibility, which enable me to collaborate effectively and adapt to diverse environments. Additionally, I excel in explaining complex concepts, engaging in research-oriented discussions, and working with teams to find innovative solutions. Furthermore, I enjoy coding, building websites and software, analyzing problems, and optimizing system workflows, all while staying open to growth and new perspectives. Ultimately, my goal is to contribute meaningful solutions in technology while continually learning and collaborating.</p>
-            </div>
-        </div>
-        <div class="page-progress d-block d-lg-none pb-3 text-black" aria-label="Page Number">
-            <div class="progress-label">Page 1 of 4</div>
-            <div class="d-flex justify-content-center">
-                <div class="progress-bar border border-2 border-black">
-                    <div class="progress-fill w-25"></div>
+            <div id="main-content" tabindex="-1" class="col-12 col-lg-10 offset-lg-2">
+                <div class="about-card">
+                    <div class="row align-items-center g-4">
+                        <div class="col-12 col-lg-3 text-center">
+                            <img src="profile.png" class="profile-image-radius" alt="Profile Image" width="550" height="580" loading="lazy" decoding="async">
+                            <h2 class="about-name">Jasper T. Aviles</h2>
+                            <p class="about-role">Software Developer</p>
+                        </div>
+                        <div class="col-12 col-lg-9">
+                            <p class="about-text">I am currently a student taking Information Systems with proficient skills in programming, analytics, and problem-solving. My technical expertise includes the use of various programming languages, including HTML, CSS, JavaScript, C++, and Java. As a receptive learner, I accept challenges and find opportunities to expand my knowledge. I also value honesty, empathy, and flexibility, which enable me to collaborate effectively and adapt to diverse environments. Additionally, I excel in explaining complex concepts, engaging in research-oriented discussions, and working with teams to find innovative solutions. Furthermore, I enjoy coding, building websites and software, analyzing problems, and optimizing system workflows, all while staying open to growth and new perspectives. Ultimately, my goal is to contribute meaningful solutions in technology while continually learning and collaborating.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

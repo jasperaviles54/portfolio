@@ -1,9 +1,25 @@
+(function() {
+  const saved = localStorage.getItem('theme');
+  if (saved) {
+    document.documentElement.setAttribute('data-theme', saved);
+  } else if (window.matchMedia('(prefers-color-scheme: light)').matches) {
+    document.documentElement.setAttribute('data-theme', 'light');
+  }
+})();
+
 if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
   document.querySelectorAll('video').forEach(v => {
     v.setAttribute('playsinline', '');
     v.setAttribute('webkit-playsinline', '');
   });
 }
+
+document.querySelectorAll('.bg-video').forEach(v => {
+  const setRate = () => { v.playbackRate = 0.75; };
+  setRate();
+  v.addEventListener('loadedmetadata', setRate);
+  v.addEventListener('play', setRate);
+});
 
 const navbarToggler = document.querySelector('.navbar-toggler');
 
@@ -22,6 +38,11 @@ const createNavLink = ({ href, text }) => {
   navLink.classList.add('nav-link');
   navLink.href = href;
   navLink.textContent = text;
+
+  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+  if (currentPage === href) {
+    navLink.classList.add('nav-link-active');
+  }
 
   navList.appendChild(navLink);
   return navList;
@@ -82,6 +103,26 @@ document.querySelectorAll('.social-icons a').forEach(link => {
     link.setAttribute('target', '_blank');
     link.setAttribute('rel', 'noopener nofollow external');
   });
+
+let toastTimer = null;
+function showToast(message, type = "success") {
+  const toast = document.getElementById("toast");
+  if (!toast) return;
+
+  clearTimeout(toastTimer);
+
+  toast.className = "toast-notification";
+  toast.classList.add(`toast-${type}`);
+  toast.textContent = message;
+
+  requestAnimationFrame(() => {
+    toast.classList.add("toast-visible");
+  });
+
+  toastTimer = setTimeout(() => {
+    toast.classList.remove("toast-visible");
+  }, 4000);
+}
 
 const handleGitboxInteractions = () => {
   const gitbox = document.getElementById("gitbox");
@@ -170,7 +211,7 @@ const handleGitboxInteractions = () => {
   gitbox.addEventListener("submit", async (submitEvent) => {
   submitEvent.preventDefault();
   submitButton.disabled = true;
-  submitButton.textContent = "Sending...";
+  submitButton.innerHTML = '<span class="spinner"></span>Sending…';
 
   if (!isFormValid()) {
     submitButton.textContent = "Submit";
@@ -180,14 +221,22 @@ const handleGitboxInteractions = () => {
 
   const email = getEmailValue();
   const message = getMessageValue();
+  const website = document.getElementById("website")?.value || "";
 
   try {
     const response = await fetch("https://portfolio-jasper-aviles-projects.vercel.app/api/submit", {
       method: "POST",
       mode: "cors",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email, message })
+      body: JSON.stringify({ email, message, website })
     });
+
+    if (response.status === 429) {
+      showToast("You've sent too many messages. Please try again in an hour.", "warning");
+      submitButton.textContent = "Submit";
+      submitButton.disabled = false;
+      return;
+    }
 
     if (!response.ok) throw new Error("Invalid response");
 
@@ -198,7 +247,7 @@ const handleGitboxInteractions = () => {
       setTimeout(() => {
         submitButton.textContent = "Submit";
       }, 3000);
-      alert("Thank you for your message!");
+      showToast("Thank you for your message!", "success");
       gitbox.reset();
       resetFormFeedback();
     } 
@@ -210,7 +259,7 @@ const handleGitboxInteractions = () => {
   
   catch (error) {
     console.error("Submission failed:", error);
-    alert("Something went wrong. Please try again.");
+    showToast("Something went wrong. Please try again.", "error");
     submitButton.textContent = "Submit";
     submitButton.disabled = false;
   }
@@ -224,6 +273,27 @@ const handleGitboxInteractions = () => {
 document.addEventListener("DOMContentLoaded", async () => {
   if (typeof renderLinks === "function") renderLinks();
   if (typeof handleGitboxInteractions === "function") handleGitboxInteractions();
+
+  /* Theme toggle button */
+  const themeToggles = document.querySelectorAll('.theme-toggle');
+  const updateIcons = () => {
+    const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+    themeToggles.forEach(btn => {
+      btn.textContent = isLight ? '☽' : '☀';
+      btn.setAttribute('aria-label', isLight ? 'Switch to dark mode' : 'Switch to light mode');
+    });
+  };
+  updateIcons();
+
+  themeToggles.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const current = document.documentElement.getAttribute('data-theme');
+      const next = current === 'light' ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+      updateIcons();
+    });
+  });
 
     document.querySelectorAll('.run-java').forEach(btn => {
       btn.addEventListener('click', () => {

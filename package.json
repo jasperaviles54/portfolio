@@ -1,5 +1,12 @@
 {
   "dependencies": {
-    "@supabase/supabase-js": "^2.55.0"
+    "@supabase/supabase-js": "^2.55.0",
+    "resend": "^6.12.3"
+  },
+  "devDependencies": {
+    "eslint": "^10.3.0",
+    "html-validate": "^10.15.0",
+    "stylelint": "^17.11.0",
+    "stylelint-config-standard": "^40.0.0"
   }
 }

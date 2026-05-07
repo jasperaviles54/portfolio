@@ -3,11 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css2?family=42dot+Sans&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Technical skills of Jasper T. Aviles — HTML, CSS, JavaScript, Java, C++, Python, and more.">
+    <meta property="og:title" content="Skills — Jasper T. Aviles">
+    <meta property="og:description" content="Technical skills of Jasper T. Aviles — programming languages, tools, and frameworks.">
+    <meta property="og:image" content="https://jasperaviles54.github.io/portfolio/profile.png">
+    <meta property="og:url" content="https://jasperaviles54.github.io/portfolio/skills.html">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Skills — Jasper T. Aviles">
+    <meta name="twitter:description" content="Technical skills of Jasper T. Aviles — programming languages, tools, and frameworks.">
+    <meta name="twitter:image" content="https://jasperaviles54.github.io/portfolio/profile.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:wght@600;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
     <title>Skills</title>
+    <script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
@@ -15,22 +28,26 @@
     <noscript>
         <meta http-equiv="refresh" content="0;url=https://jasperaviles54.github.io/portfolio-noscript/skills.html">
     </noscript>
+    <a href="#main-content" class="skip-link">Skip to content</a>
     <header class="header-bar">
-        <div class="page-progress offset-lg-2 d-none d-lg-block" aria-label="Page Number">
-            <div class="progress-label">Page 2 of 4</div>
-            <div class="progress-bar border border-2 border-white">
-                <div class="progress-fill w-50"></div>
-            </div>
-        </div>
-        <button class="d-lg-none menu-button" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvaslinks">
+        <nav class="page-breadcrumb offset-lg-2 d-none d-lg-block" aria-label="Breadcrumb">
+            <a href="index.html" class="page-breadcrumb-link">Home</a>
+            <span class="page-breadcrumb-sep" aria-hidden="true">/</span>
+            <span class="page-breadcrumb-current" aria-current="page">Skills</span>
+        </nav>
+        <button class="d-lg-none menu-button" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvaslinks" aria-label="Open menu">
             <i class="bi bi-list"></i><span class="d-none d-sm-inline-block">Menu</span>
         </button>
         <div class="title-wrapper">
             <h1 class="title-layout ms-2 ms-lg-0 mt-2 mt-lg-0">Skills</h1>
         </div>
-        <a href="index.html" class="home-button gap-2">
-            <i class="bi bi-house-door"></i><span class="d-none d-sm-block">Home</span> 
+        <a href="index.html" class="home-button d-lg-none gap-2" aria-label="Go to home page">
+            <i class="bi bi-house-door"></i><span class="d-none d-sm-block">Home</span>
         </a>
+        <a href="resume.html" class="header-cta d-none d-lg-flex align-items-center gap-2 me-lg-4" aria-label="View My Resume">
+            <i class="bi bi-file-earmark-person"></i><span>Resume</span>
+        </a>
+        <button class="theme-toggle d-none d-lg-inline-flex" aria-label="Toggle theme"></button>
     </header>
     <main class="container-fluid sub-content">
         <div class="row gy-4">
@@ -51,45 +68,45 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-lg-10 pt-lg-3 px-lg-4">
+            <div id="main-content" tabindex="-1" class="col-12 col-lg-10 pt-lg-3 px-lg-4">
                 <div class="px-2 py-2">
                     <div class="skills-box p-4" aria-labelledby="lang-heading">
                         <h2 id="lang-heading" class="text-center mb-3">Programming Languages & Databases</h2>
                         <div class="d-flex flex-wrap gap-3 justify-content-center">
                             <figure class="skill-item">
-                            <img src="skills/logos/pld/cpp.svg" alt="C++ logo">
+                            <img src="skills/logos/pld/cpp.svg" alt="C++ logo" width="48" height="48" loading="lazy" decoding="async">
                             <figcaption>C++</figcaption>
                             </figure>
                             <figure class="skill-item">
-                            <img src="skills/logos/pld/css3.svg" alt="CSS3 logo">
+                            <img src="skills/logos/pld/css3.svg" alt="CSS3 logo" width="48" height="48" loading="lazy" decoding="async">
                             <figcaption>CSS3</figcaption>
                             </figure>
                             <figure class="skill-item">
-                            <img src="skills/logos/pld/dart.svg" alt="Dart logo">
+                            <img src="skills/logos/pld/dart.svg" alt="Dart logo" width="48" height="48" loading="lazy" decoding="async">
                             <figcaption>Dart</figcaption>
                             </figure>
                             <figure class="skill-item">
-                            <img src="skills/logos/pld/html5.svg" alt="HTML5 logo">
+                            <img src="skills/logos/pld/html5.svg" alt="HTML5 logo" width="48" height="48" loading="lazy" decoding="async">
                             <figcaption>HTML5</figcaption>
                             </figure>
                             <figure class="skill-item">
-                            <img src="skills/logos/pld/java.svg" alt="Java logo">
+                            <img src="skills/logos/pld/java.svg" alt="Java logo" width="48" height="48" loading="lazy" decoding="async">
                             <figcaption>Java</figcaption>
                             </figure>
                             <figure class="skill-item">
-                            <img src="skills/logos/pld/javascript.svg" alt="JavaScript logo">
+                            <img src="skills/logos/pld/javascript.svg" alt="JavaScript logo" width="48" height="48" loading="lazy" decoding="async">
                             <figcaption>JavaScript</figcaption>
                             </figure>
                             <figure class="skill-item">
-                            <img src="skills/logos/pld/oracle.svg" alt="Oracle SQL / Live SQL logo">
+                            <img src="skills/logos/pld/oracle.svg" alt="Oracle SQL / Live SQL logo" width="48" height="48" loading="lazy" decoding="async">
                             <figcaption>Oracle SQL / Live SQL</figcaption>
                             </figure>
                             <figure class="skill-item">
-                            <img src="skills/logos/pld/python.svg" alt="Python logo">
+                            <img src="skills/logos/pld/python.svg" alt="Python logo" width="48" height="48" loading="lazy" decoding="async">
                             <figcaption>Python</figcaption>
                             </figure>
                             <figure class="skill-item">
-                            <img src="skills/logos/pld/r.svg" alt="R logo">
+                            <img src="skills/logos/pld/r.svg" alt="R logo" width="48" height="48" loading="lazy" decoding="async">
                             <figcaption>R</figcaption>
                             </figure>
                         </div>
@@ -101,11 +118,11 @@
                         <h2 id="frameworks-heading" class="text-center mb-3">Frameworks</h2>
                         <div class="d-flex flex-wrap gap-3 justify-content-center">
                             <figure class="skill-item">
-                            <img src="skills/logos/frameworks/bootstrap.svg" alt="Bootstrap logo">
+                            <img src="skills/logos/frameworks/bootstrap.svg" alt="Bootstrap logo" width="48" height="48" loading="lazy" decoding="async">
                             <figcaption>Bootstrap</figcaption>
                             </figure>
                             <figure class="skill-item">
-                            <img src="skills/logos/frameworks/flutter.svg" alt="Flutter logo">
+                            <img src="skills/logos/frameworks/flutter.svg" alt="Flutter logo" width="48" height="48" loading="lazy" decoding="async">
                             <figcaption>Flutter</figcaption>
                             </figure>
                         </div>
@@ -117,19 +134,19 @@
                         <h2 id="tools-heading" class="text-center mb-3">Data Science & Analytics Tools</h2>
                         <div class="d-flex flex-wrap gap-3 justify-content-center">
                             <figure class="skill-item">
-                            <img src="skills/logos/dsat/jupyter.svg" alt="Jupyter logo">
+                            <img src="skills/logos/dsat/jupyter.svg" alt="Jupyter logo" width="48" height="48" loading="lazy" decoding="async">
                             <figcaption>Jupyter</figcaption>
                             </figure>
                             <figure class="skill-item">
-                            <img src="skills/logos/dsat/rstudio.svg" alt="RStudio logo">
+                            <img src="skills/logos/dsat/rstudio.svg" alt="RStudio logo" width="48" height="48" loading="lazy" decoding="async">
                             <figcaption>RStudio</figcaption>
                             </figure>
                             <figure class="skill-item">
-                            <img src="skills/logos/dsat/tableau.svg" alt="Tableau logo">
+                            <img src="skills/logos/dsat/tableau.svg" alt="Tableau logo" width="48" height="48" loading="lazy" decoding="async">
                             <figcaption>Tableau Public</figcaption>
                             </figure>
                             <figure class="skill-item">
-                            <img src="skills/logos/dsat/weka.png" alt="Weka logo">
+                            <img src="skills/logos/dsat/weka.png" alt="Weka logo" width="120" height="100" loading="lazy" decoding="async">
                             <figcaption>Weka Explorer</figcaption>
                             </figure>
                         </div>
@@ -141,27 +158,27 @@
                         <h2 id="devtools-heading" class="text-center mb-3">Development Tools</h2>
                         <div class="d-flex flex-wrap gap-3 justify-content-center">
                             <figure class="skill-item">
-                            <img src="skills/logos/dt/bluej.svg" alt="BlueJ logo">
+                            <img src="skills/logos/dt/bluej.svg" alt="BlueJ logo" width="48" height="48" loading="lazy" decoding="async">
                             <figcaption>BlueJ</figcaption>
                             </figure>
                             <figure class="skill-item">
-                            <img src="skills/logos/dt/devcpp.png" alt="Dev-C++ logo">
+                            <img src="skills/logos/dt/devcpp.png" alt="Dev-C++ logo" width="48" height="48" loading="lazy" decoding="async">
                             <figcaption>Dev-C++</figcaption>
                             </figure>
                             <figure class="skill-item">
-                            <img src="skills/logos/dt/eclipse.svg" alt="Eclipse logo">
+                            <img src="skills/logos/dt/eclipse.svg" alt="Eclipse logo" width="48" height="48" loading="lazy" decoding="async">
                             <figcaption>Eclipse</figcaption>
                             </figure>
                             <figure class="skill-item">
-                            <img src="skills/logos/dt/git.svg" alt="Git logo">
+                            <img src="skills/logos/dt/git.svg" alt="Git logo" width="48" height="48" loading="lazy" decoding="async">
                             <figcaption>Git</figcaption>
                             </figure>
                             <figure class="skill-item">
-                            <img src="contact/icons/github.svg" alt="GitHub logo">
+                            <img src="contact/icons/github.svg" alt="GitHub logo" width="48" height="48" loading="lazy" decoding="async">
                             <figcaption>GitHub</figcaption>
                             </figure>
                             <figure class="skill-item">
-                            <img src="skills/logos/dt/vscode.svg" alt="Visual Studio Code logo">
+                            <img src="skills/logos/dt/vscode.svg" alt="Visual Studio Code logo" width="48" height="48" loading="lazy" decoding="async">
                             <figcaption>Visual Studio Code</figcaption>
                             </figure>
                         </div>  
@@ -173,15 +190,15 @@
                         <h2 id="design-heading" class="text-center mb-3">Design, Prototyping, and Hardware Platforms</h2>
                         <div class="d-flex flex-wrap gap-3 justify-content-center">
                             <figure class="skill-item">
-                            <img src="skills/logos/dph/arduino.svg" alt="Arduino logo">
+                            <img src="skills/logos/dph/arduino.svg" alt="Arduino logo" width="48" height="48" loading="lazy" decoding="async">
                             <figcaption>Arduino</figcaption>
                             </figure>
                             <figure class="skill-item">
-                            <img src="skills/logos/dph/figma.svg" alt="Figma logo">
+                            <img src="skills/logos/dph/figma.svg" alt="Figma logo" width="48" height="48" loading="lazy" decoding="async">
                             <figcaption>Figma</figcaption>
                             </figure>
                             <figure class="skill-item">
-                            <img src="skills/logos/dph/tinkercad.svg" alt="Tinkercad logo">
+                            <img src="skills/logos/dph/tinkercad.svg" alt="Tinkercad logo" width="48" height="48" loading="lazy" decoding="async">
                             <figcaption>Tinkercad</figcaption>
                             </figure>
                         </div>
@@ -193,35 +210,27 @@
                         <h2 id="certs-heading" class="text-center mb-3">Certifications</h2>
                         <div class="d-flex flex-wrap gap-3 justify-content-center">
                             <figure class="skill-item">
-                            <a href="skills/logos/certifications/dstudio.png" target="_blank"><img src="skills/logos/certifications/dstudio.png" alt="Introduction to Data Studio Certification"></a>
+                            <a href="skills/logos/certifications/dstudio.png" target="_blank" rel="noopener" aria-label="View Introduction to Data Studio Certification"><img src="skills/logos/certifications/dstudio.png" alt="Introduction to Data Studio Certification" width="200" height="127" loading="lazy" decoding="async"></a>
                             <figcaption>Introduction to Data Studio</figcaption>
                             </figure>
                             <figure class="skill-item">
-                            <a href="skills/logos/certifications/ganalytics.png" target="_blank"><img src="skills/logos/certifications/ganalytics.png" alt="Google Analytics Certification"></a>
+                            <a href="skills/logos/certifications/ganalytics.png" target="_blank" rel="noopener" aria-label="View Google Analytics Certification"><img src="skills/logos/certifications/ganalytics.png" alt="Google Analytics Certification" width="200" height="154" loading="lazy" decoding="async"></a>
                             <figcaption>Google Analytics</figcaption>
                             </figure>
                             <figure class="skill-item">
-                            <a href="skills/logos/certifications/ganalyticsb.png" target="_blank"><img src="skills/logos/certifications/ganalyticsb.png" alt="Google Analytics for Beginners Certification"></a>
+                            <a href="skills/logos/certifications/ganalyticsb.png" target="_blank" rel="noopener" aria-label="View Google Analytics for Beginners Certification"><img src="skills/logos/certifications/ganalyticsb.png" alt="Google Analytics for Beginners Certification" width="200" height="127" loading="lazy" decoding="async"></a>
                             <figcaption>Google Analytics for Beginners</figcaption>
                             </figure>
                             <figure class="skill-item">
-                            <a href="skills/logos/certifications/ibmedtp.png" target="_blank"><img src="skills/logos/certifications/ibmedtp.png" alt="Enterprise Design Thinking Practitioner Certification"></a>
+                            <a href="skills/logos/certifications/ibmedtp.png" target="_blank" rel="noopener" aria-label="View Enterprise Design Thinking Practitioner Certification"><img src="skills/logos/certifications/ibmedtp.png" alt="Enterprise Design Thinking Practitioner Certification" width="200" height="154" loading="lazy" decoding="async"></a>
                             <figcaption>Enterprise Design Thinking Practitioner</figcaption>
                             </figure>
                             <figure class="skill-item">
-                            <a href="skills/logos/certifications/lsswbpc.png" target="_blank"><img src="skills/logos/certifications/lsswbpc.png" alt="Lean Six Sigma White Belt Professional Certification"></a>
+                            <a href="skills/logos/certifications/lsswbpc.png" target="_blank" rel="noopener" aria-label="View Lean Six Sigma White Belt Professional Certification"><img src="skills/logos/certifications/lsswbpc.png" alt="Lean Six Sigma White Belt Professional Certification" width="200" height="141" loading="lazy" decoding="async"></a>
                             <figcaption>Lean Six Sigma White Belt</figcaption>
                             </figure>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-        <div class="page-progress d-block d-lg-none pb-3 text-black" aria-label="Page Number">
-            <div class="progress-label">Page 2 of 4</div>
-            <div class="d-flex justify-content-center">
-                <div class="progress-bar border border-2 border-black">
-                    <div class="progress-fill w-50"></div>
                 </div>
             </div>
         </div>

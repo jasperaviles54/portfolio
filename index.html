@@ -3,22 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href='https://fonts.googleapis.com/css2?family=Jacques+Francois&display=swap' rel='stylesheet'>
-    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Jasper T. Aviles — Software Developer specializing in Information Systems. Explore my projects, skills, and experience.">
+    <meta property="og:title" content="Jasper T. Aviles — Software Developer">
+    <meta property="og:description" content="Portfolio of Jasper T. Aviles — Software Developer specializing in Information Systems.">
+    <meta property="og:image" content="https://jasperaviles54.github.io/portfolio/profile.png">
+    <meta property="og:url" content="https://jasperaviles54.github.io/portfolio/">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Jasper T. Aviles — Software Developer">
+    <meta name="twitter:description" content="Portfolio of Jasper T. Aviles — Software Developer specializing in Information Systems.">
+    <meta name="twitter:image" content="https://jasperaviles54.github.io/portfolio/profile.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:wght@600;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
     <title>Jasper T. Aviles - Software Developer</title>
+    <script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body>
     <div class="video-container position-fixed top-0 start-0 min-vh-100 overflow-hidden">
-    <video autoplay muted loop preload="auto" poster="bg.png" class="position-absolute w-100 h-100 object-fit-cover" aria-hidden="true">
+    <video autoplay muted loop playsinline webkit-playsinline preload="metadata" poster="bg.png" class="position-absolute w-100 h-100 object-fit-cover bg-video" aria-hidden="true">
         <source src="scriptbg.mp4" type="video/mp4">
     </video>
-    </div> 
+    <div class="video-overlay" aria-hidden="true"></div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
     <script src="script.js" defer></script>
     <noscript>
         <meta http-equiv="refresh" content="0;url=https://jasperaviles54.github.io/portfolio-noscript/index.html">
     </noscript>
+    <a href="#main-content" class="skip-link">Skip to content</a>
     <nav class="navbar nav-color-1 fixed-top navbar-expand-lg" aria-label="Navigation menu" role="navigation">
         <div class="container-fluid">
             <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarlinks" aria-controls="navbarlinks" aria-expanded="false" aria-label="Expand navigation menu">
@@ -27,14 +42,15 @@
             <div class="collapse navbar-collapse justify-content-center" id="navbarlinks">
                 <ul class="navbar-nav nav-links text-center"></ul>
             </div>
+            <button class="theme-toggle" aria-label="Toggle theme"></button>
         </div>
     </nav>
-    <section class="main-content text-white d-flex flex-column justify-content-center align-items-center text-center pb-5 pb-lg-0">
+    <section id="main-content" tabindex="-1" class="main-content text-white d-flex flex-column justify-content-center align-items-center text-center pb-5 pb-lg-0">
         <div class="position-absolute pb-5 pb-lg-0">
             <h1>JASPER T. AVILES</h1>
             <h2>Software Developer</h2>
         </div>
-            <a href="MyResume.pdf" target="_blank" rel="noopener" class="resume-button rounded-pill resume-button-spacing mb-5 mb-lg-0" aria-label="View My Resume">View My Resume</a>
+            <a href="resume.html" class="resume-button rounded-pill resume-button-spacing mb-5 mb-lg-0" aria-label="View My Resume">View My Resume</a>
     </section>
 </body>
 </html>

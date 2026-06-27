@@ -10,10 +10,6 @@ jobs:
   lint:
     name: Lint & Validate
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: portfolio
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -23,7 +19,7 @@ jobs:
         with:
           node-version: 20
           cache: npm
-          cache-dependency-path: portfolio/package-lock.json
+          cache-dependency-path: package-lock.json
 
       - name: Install dependencies
         run: npm ci
@@ -56,5 +52,5 @@ jobs:
             https://jasperaviles54.github.io/portfolio/skills.html
             https://jasperaviles54.github.io/portfolio/projects.html
             https://jasperaviles54.github.io/portfolio/contacts.html
-          budgetPath: portfolio/.lighthouserc.json
+          budgetPath: .lighthouserc.json
           uploadArtifacts: true

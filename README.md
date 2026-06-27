@@ -1,9 +1,25 @@
 # Jasper T. Aviles — Portfolio
 
-[![CI — Lint & Validate](https://github.com/jasperaviles54/jasperaviles54.github.io/actions/workflows/ci.yml/badge.svg)](https://github.com/jasperaviles54/jasperaviles54.github.io/actions/workflows/ci.yml)
+[![CI — Lint & Validate](https://github.com/jasperaviles54/portfolio/actions/workflows/ci.yml/badge.svg)](https://github.com/jasperaviles54/portfolio/actions/workflows/ci.yml)
+
 A modern, dark-themed developer portfolio built with vanilla HTML, CSS, and JavaScript. Features a video hero landing page, interactive Java applet demos via CheerpJ, a server-side contact form with spam protection, and a fully functional noscript fallback.
 
 🔗 **Live site:** [jasperaviles54.github.io/portfolio](https://jasperaviles54.github.io/portfolio/)
+
+---
+
+## Features
+
+- 🎬 **Video hero landing page** — autoplay background video with poster fallback
+- 🌗 **Dark / light theme toggle** — preference saved in `localStorage`
+- ☕ **In-browser Java demos** — CheerpJ 3 runs `.jar` files directly in the browser
+- 📬 **Server-side contact form** — Supabase storage + Resend email notifications
+- 🤖 **Spam protection** — honeypot field + IP-based rate limiting (5/hr)
+- 📄 **Print-friendly resume** — dedicated resume page optimized for printing
+- ♿ **Noscript fallback** — a separate [CSS-only version](https://github.com/jasperaviles54/portfolio-noscript) for users with JavaScript disabled
+- 🔍 **SEO-ready** — Open Graph / Twitter meta tags, `sitemap.xml`, `robots.txt`
+- 📊 **Privacy-respecting analytics** — Vercel Analytics (no cookies)
+- 🔄 **CI/CD** — automated linting (ESLint, Stylelint, HTML Validate) and Lighthouse audits
 
 ---
 
@@ -15,6 +31,7 @@ A modern, dark-themed developer portfolio built with vanilla HTML, CSS, and Java
 ![Projects Page](docs/screenshots/projects.PNG)
 ![Contacts Page](docs/screenshots/contacts.PNG)
 ![Resume Page](docs/screenshots/resume.PNG)
+
 ---
 
 ## Tech Stack
@@ -41,7 +58,7 @@ Browser (GitHub Pages)
   ├── portfolio/          ← JS-enabled version
   │     └── script.js     ← form submit, theme toggle, nav
   │
-  └── portfolio-noscript/ ← CSS-only fallback
+  └── portfolio-noscript/ ← CSS-only fallback (separate repo)
         └── redirect <script> → portfolio/ if JS is available
 
 POST /api/submit
@@ -54,35 +71,36 @@ POST /api/submit
 ```
 
 See [`docs/architecture.md`](docs/architecture.md) for a detailed Mermaid diagram.
+See the [portfolio-noscript](https://github.com/jasperaviles54/portfolio-noscript) repo for the CSS-only fallback.
 
 ---
 
 ## Project Structure
 
 ```
-main/
-├── portfolio/                 # JS-enabled site (deployed to GitHub Pages)
-│   ├── index.html             # Hero landing page with video background
-│   ├── about.html             # About me + profile card
-│   ├── skills.html            # Skills grid + certifications
-│   ├── projects.html          # Project cards with Java demos
-│   ├── contacts.html          # Contact form (Supabase backend)
-│   ├── resume.html            # Print-friendly resume page
-│   ├── 404.html               # Custom 404 page
-│   ├── styles.css             # Complete design system
-│   ├── script.js              # Client-side logic
-│   ├── api/
-│   │   └── submit.js          # Vercel serverless function
-│   ├── contact/icons/         # Social media SVG icons
-│   ├── projects/logos/         # Project thumbnails
-│   └── skills/logos/           # Skill + certification images
-│
-├── portfolio-noscript/        # CSS-only fallback (noscript users)
-│   ├── [same page structure]
-│   └── styles.css             # Adapted styles (no JS dependencies)
-│
-└── WR/                        # Working records & documentation
-    └── portfolio-improvements-plan.md
+├── index.html              # Hero landing page with video background
+├── about.html              # About me + profile card
+├── skills.html             # Skills grid + certifications
+├── projects.html           # Project cards with Java demos
+├── contacts.html           # Contact form (Supabase backend)
+├── resume.html             # Print-friendly resume page
+├── 404.html                # Custom 404 page
+├── java-demo.html          # CheerpJ Java applet launcher
+├── styles.css              # Complete design system
+├── script.js               # Client-side logic
+├── api/
+│   └── submit.js           # Vercel serverless function
+├── contact/icons/          # Social media SVG icons
+├── projects/logos/         # Project thumbnails
+├── skills/logos/           # Skill + certification images
+├── docs/
+│   ├── architecture.md     # Mermaid architecture diagram
+│   └── screenshots/        # README screenshots
+├── .github/workflows/
+│   └── ci.yml              # Lint + Lighthouse CI
+├── package.json            # Dependencies (Supabase, Resend, linters)
+├── CONTRIBUTING.md         # Branch naming + commit conventions
+└── LICENSE                 # MIT License
 ```
 
 ---
@@ -97,15 +115,11 @@ main/
 
 ```bash
 # Clone the repository
-git clone https://github.com/jasperaviles54/jasperaviles54.github.io.git
-cd jasperaviles54.github.io/portfolio
+git clone https://github.com/jasperaviles54/portfolio.git
+cd portfolio
 
 # Install dependencies
 npm install
-
-# Create a .env file from the example
-cp .env.example .env
-# Fill in your actual values (see Environment Variables below)
 
 # Start local dev server with Vercel (handles serverless functions)
 vercel dev
@@ -122,20 +136,63 @@ vercel dev
 | `RESEND_API_KEY` | Resend API key for email notifications | ✅ |
 | `NOTIFY_TO_EMAIL` | Email address to receive contact form notifications | ✅ |
 
-See [`.env.example`](.env.example) for the template.
+These variables are configured in the **Vercel dashboard** under **Settings → Environment Variables** — not via a local `.env` file.
 
 ---
 
 ## Deployment
 
 ### GitHub Pages (Static Site)
-The `portfolio/` directory is deployed to GitHub Pages. Push to `main` and configure Pages to serve from the root.
+The root directory is deployed to GitHub Pages. Push to `main` and configure Pages to serve from the root.
 
 ### Vercel (Serverless API)
-The `portfolio/api/submit.js` function is deployed to Vercel. Environment variables must be configured in the Vercel dashboard under **Settings → Environment Variables**.
+The `api/submit.js` function is deployed to Vercel. Environment variables must be configured in the Vercel dashboard under **Settings → Environment Variables**.
+
+---
+
+## Browser Support
+
+| Browser | Status | Notes |
+|---|---|---|
+| Chrome / Edge (Chromium) | ✅ Full support | CheerpJ Java demos work best here |
+| Firefox | ✅ Full support | |
+| Safari | ✅ Full support | |
+| Browsers with JS disabled | ⚠️ Fallback | Redirected to [portfolio-noscript](https://jasperaviles54.github.io/portfolio-noscript/) |
+
+> **Note:** CheerpJ 3 requires a modern browser with WebAssembly support. The Java demo pages will not function in older browsers.
+
+---
+
+## Accessibility
+
+- **Noscript fallback** — a fully functional [CSS-only version](https://jasperaviles54.github.io/portfolio-noscript/) for users with JavaScript disabled
+- **Skip-to-content links** — keyboard users can bypass the navigation
+- **Semantic HTML** — proper landmark elements (`<nav>`, `<main>`, `<footer>`)
+- **ARIA labels** — navigation and interactive elements are labeled for screen readers
+- **Lighthouse audits** — automated accessibility checks run on every push to `main`
 
 ---
 
 ## License
 
 This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
+
+---
+
+## Acknowledgments
+
+- [Bootstrap 5](https://getbootstrap.com/) — responsive grid and utilities
+- [CheerpJ 3](https://cheerpj.com/) — Java-to-WebAssembly compiler
+- [Google Fonts](https://fonts.google.com/) — Inter and Source Serif 4 typefaces
+- [Supabase](https://supabase.com/) — open-source PostgreSQL backend
+- [Resend](https://resend.com/) — transactional email API
+- [Vercel](https://vercel.com/) — serverless functions and analytics
+
+---
+
+## Author
+
+**Jasper T. Aviles** — Software Developer
+
+- 🌐 [Portfolio](https://jasperaviles54.github.io/portfolio/)
+- 💻 [GitHub](https://github.com/jasperaviles54)

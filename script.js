@@ -323,4 +323,12 @@ document.addEventListener("DOMContentLoaded", async () => {
       alert("Something went wrong.");
     }
   }
+
+  const kioskModal = document.getElementById("kioskDemoModal");
+  if (kioskModal) {
+    kioskModal.addEventListener("hidden.bs.modal", function () {
+      const video = kioskModal.querySelector("video");
+      if (video) { video.pause(); }
+    });
+  }
 });

@@ -25,12 +25,8 @@ A modern, dark-themed developer portfolio built with vanilla HTML, CSS, and Java
 
 ## Screenshots
 
-![Home Page](docs/screenshots/home.PNG)
-![About Page](docs/screenshots/about.PNG)
-![Skills Page](docs/screenshots/skills.PNG)
-![Projects Page](docs/screenshots/projects.PNG)
-![Contacts Page](docs/screenshots/contacts.PNG)
-![Resume Page](docs/screenshots/resume.PNG)
+![Home Page](docs/screenshots/home.jpeg)
+![Projects Page](docs/screenshots/projects.jpeg)
 
 ---
 

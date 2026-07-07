@@ -233,7 +233,7 @@
                         aria-label="Close"></button>
                 </div>
                 <div class="modal-body p-0">
-                    <video id="kioskDemoVideo" class="w-100" controls preload="metadata"
+                    <video id="kioskDemoVideo" class="w-100" controls preload="none"
                         poster="projects/logos/KioskSetup.png">
                         <source src="projects/videos/Demo.mp4"
                             type="video/mp4">
@@ -243,6 +243,20 @@
             </div>
         </div>
     </div>
+    <script>
+        // Auto-play demo video when modal opens, pause and reset when it closes
+        const kioskModal = document.getElementById('kioskDemoModal');
+        const kioskVideo = document.getElementById('kioskDemoVideo');
+        if (kioskModal && kioskVideo) {
+            kioskModal.addEventListener('shown.bs.modal', function () {
+                kioskVideo.play();
+            });
+            kioskModal.addEventListener('hidden.bs.modal', function () {
+                kioskVideo.pause();
+                kioskVideo.currentTime = 0;
+            });
+        }
+    </script>
 </body>
 
 </html>

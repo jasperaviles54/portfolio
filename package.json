@@ -4,6 +4,7 @@
     "resend": "^6.12.3"
   },
   "devDependencies": {
+    "@eslint/js": "^10.0.1",
     "eslint": "^10.3.0",
     "html-validate": "^10.15.0",
     "stylelint": "^17.11.0",

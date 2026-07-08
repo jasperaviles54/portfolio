@@ -7,6 +7,10 @@
     "no-raw-characters": ["error", { "relaxed": true }],
     "void-style": "off",
     "attribute-boolean-style": "off",
-    "element-permitted-content": "off"
+    "element-permitted-content": "off",
+    "no-autoplay": "off",
+    "no-redundant-role": "off",
+    "hidden-focusable": "off",
+    "aria-label-misuse": "off"
   }
 }

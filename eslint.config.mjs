@@ -20,7 +20,12 @@ export default [
         matchMedia: "readonly",
         navigator: "readonly",
         alert: "readonly",
-        process: "readonly"
+        process: "readonly",
+        URLSearchParams: "readonly",
+        parseInt: "readonly",
+        cheerpjInit: "readonly",
+        cheerpjCreateDisplay: "readonly",
+        cheerpjRunJar: "readonly"
       }
     },
     rules: {

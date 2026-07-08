@@ -224,7 +224,7 @@ const handleGitboxInteractions = () => {
   const website = document.getElementById("website")?.value || "";
 
   try {
-    const response = await fetch("https://portfolio-jasper-aviles-projects.vercel.app/api/submit", {
+    const response = await fetch("https://portfolio-jasperaviles54.vercel.app/api/submit", {
       method: "POST",
       mode: "cors",
       headers: { "Content-Type": "application/json" },

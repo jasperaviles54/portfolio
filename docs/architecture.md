@@ -35,7 +35,7 @@ graph TD
 
 1. **User visits site** → GitHub Pages serves static HTML/CSS/JS from `portfolio/`
 2. **Noscript fallback** → `portfolio-noscript/` contains a `<script>` redirect. If JS runs, user goes to the main site. If JS is disabled, the CSS-only version renders.
-3. **Contact form submit** → `script.js` sends a `POST` to `https://portfolio-jasper-aviles-projects.vercel.app/api/submit`
+3. **Contact form submit** → `script.js` sends a `POST` to `https://portfolio-jasperaviles54.vercel.app/api/submit`
 4. **Server-side pipeline** in `api/submit.js`:
    - **Honeypot check** — if the hidden `website` field is filled, return a fake `200 OK` (bot thinks it succeeded)
    - **Rate limiter** — in-memory, max 5 submissions per hour per IP

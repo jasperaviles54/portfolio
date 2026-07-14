@@ -953,6 +953,30 @@ img[alt="Vercel logo"] {
     color: var(--color-text);
 }
 
+.resume-projects-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.5rem;
+    border: 1.5px solid var(--color-text);
+    border-radius: 6px;
+    color: var(--color-text);
+    text-decoration: none;
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.resume-projects-link:hover {
+    background-color: var(--color-text);
+    color: var(--color-bg);
+}
+
+.resume-projects-link i {
+    font-size: 1.1em;
+}
+
 /* ── Print stylesheet ── */
 @media print {
     body {
